@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E999BD221782203400B47706 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD211782203400B47706 /* UIKit.framework */; };
+		E999BD241782203400B47706 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD231782203400B47706 /* Foundation.framework */; };
+		E999BD261782203400B47706 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD251782203400B47706 /* CoreGraphics.framework */; };
+		E999BD281782203400B47706 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD271782203400B47706 /* GLKit.framework */; };
+		E999BD2A1782203400B47706 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD291782203400B47706 /* OpenGLES.framework */; };
+		E999BD301782203400B47706 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E999BD2E1782203400B47706 /* InfoPlist.strings */; };
+		E999BD321782203400B47706 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E999BD311782203400B47706 /* main.m */; };
+		E999BD361782203400B47706 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E999BD351782203400B47706 /* AppDelegate.m */; };
+		E999BD381782203400B47706 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E999BD371782203400B47706 /* Default.png */; };
+		E999BD3A1782203400B47706 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E999BD391782203400B47706 /* Default@2x.png */; };
+		E999BD3C1782203400B47706 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E999BD3B1782203400B47706 /* Default-568h@2x.png */; };
+		E999BD3F1782203400B47706 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E999BD3D1782203400B47706 /* MainStoryboard_iPhone.storyboard */; };
+		E999BD421782203400B47706 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E999BD401782203400B47706 /* MainStoryboard_iPad.storyboard */; };
+		E999BD441782203400B47706 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = E999BD431782203400B47706 /* Shader.fsh */; };
+		E999BD461782203400B47706 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = E999BD451782203400B47706 /* Shader.vsh */; };
+		E999BD491782203400B47706 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E999BD481782203400B47706 /* ViewController.m */; };
+		E999BD511782203400B47706 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD501782203400B47706 /* SenTestingKit.framework */; };
+		E999BD521782203400B47706 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD211782203400B47706 /* UIKit.framework */; };
+		E999BD531782203400B47706 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD231782203400B47706 /* Foundation.framework */; };
+		E999BD5B1782203400B47706 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E999BD591782203400B47706 /* InfoPlist.strings */; };
+		E999BD5E1782203400B47706 /* tuxblocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E999BD5D1782203400B47706 /* tuxblocksTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E999BD541782203400B47706 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E999BD161782203400B47706 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E999BD1D1782203400B47706;
+			remoteInfo = tuxblocks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E999BD1E1782203400B47706 /* tuxblocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tuxblocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E999BD211782203400B47706 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E999BD231782203400B47706 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E999BD251782203400B47706 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E999BD271782203400B47706 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		E999BD291782203400B47706 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E999BD2D1782203400B47706 /* tuxblocks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tuxblocks-Info.plist"; sourceTree = "<group>"; };
+		E999BD2F1782203400B47706 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E999BD311782203400B47706 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E999BD331782203400B47706 /* tuxblocks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tuxblocks-Prefix.pch"; sourceTree = "<group>"; };
+		E999BD341782203400B47706 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E999BD351782203400B47706 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E999BD371782203400B47706 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E999BD391782203400B47706 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E999BD3B1782203400B47706 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E999BD3E1782203400B47706 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		E999BD411782203400B47706 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		E999BD431782203400B47706 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		E999BD451782203400B47706 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		E999BD471782203400B47706 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E999BD481782203400B47706 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E999BD4F1782203400B47706 /* tuxblocksTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tuxblocksTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E999BD501782203400B47706 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		E999BD581782203400B47706 /* tuxblocksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tuxblocksTests-Info.plist"; sourceTree = "<group>"; };
+		E999BD5A1782203400B47706 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E999BD5C1782203400B47706 /* tuxblocksTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tuxblocksTests.h; sourceTree = "<group>"; };
+		E999BD5D1782203400B47706 /* tuxblocksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tuxblocksTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E999BD1B1782203400B47706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999BD221782203400B47706 /* UIKit.framework in Frameworks */,
+				E999BD241782203400B47706 /* Foundation.framework in Frameworks */,
+				E999BD261782203400B47706 /* CoreGraphics.framework in Frameworks */,
+				E999BD281782203400B47706 /* GLKit.framework in Frameworks */,
+				E999BD2A1782203400B47706 /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E999BD4B1782203400B47706 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999BD511782203400B47706 /* SenTestingKit.framework in Frameworks */,
+				E999BD521782203400B47706 /* UIKit.framework in Frameworks */,
+				E999BD531782203400B47706 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E999BD151782203400B47706 = {
+			isa = PBXGroup;
+			children = (
+				E999BD2B1782203400B47706 /* tuxblocks */,
+				E999BD561782203400B47706 /* tuxblocksTests */,
+				E999BD201782203400B47706 /* Frameworks */,
+				E999BD1F1782203400B47706 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E999BD1F1782203400B47706 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E999BD1E1782203400B47706 /* tuxblocks.app */,
+				E999BD4F1782203400B47706 /* tuxblocksTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E999BD201782203400B47706 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E999BD211782203400B47706 /* UIKit.framework */,
+				E999BD231782203400B47706 /* Foundation.framework */,
+				E999BD251782203400B47706 /* CoreGraphics.framework */,
+				E999BD271782203400B47706 /* GLKit.framework */,
+				E999BD291782203400B47706 /* OpenGLES.framework */,
+				E999BD501782203400B47706 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E999BD2B1782203400B47706 /* tuxblocks */ = {
+			isa = PBXGroup;
+			children = (
+				E999BD341782203400B47706 /* AppDelegate.h */,
+				E999BD351782203400B47706 /* AppDelegate.m */,
+				E999BD3D1782203400B47706 /* MainStoryboard_iPhone.storyboard */,
+				E999BD401782203400B47706 /* MainStoryboard_iPad.storyboard */,
+				E999BD431782203400B47706 /* Shader.fsh */,
+				E999BD451782203400B47706 /* Shader.vsh */,
+				E999BD471782203400B47706 /* ViewController.h */,
+				E999BD481782203400B47706 /* ViewController.m */,
+				E999BD2C1782203400B47706 /* Supporting Files */,
+			);
+			path = tuxblocks;
+			sourceTree = "<group>";
+		};
+		E999BD2C1782203400B47706 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E999BD2D1782203400B47706 /* tuxblocks-Info.plist */,
+				E999BD2E1782203400B47706 /* InfoPlist.strings */,
+				E999BD311782203400B47706 /* main.m */,
+				E999BD331782203400B47706 /* tuxblocks-Prefix.pch */,
+				E999BD371782203400B47706 /* Default.png */,
+				E999BD391782203400B47706 /* Default@2x.png */,
+				E999BD3B1782203400B47706 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E999BD561782203400B47706 /* tuxblocksTests */ = {
+			isa = PBXGroup;
+			children = (
+				E999BD5C1782203400B47706 /* tuxblocksTests.h */,
+				E999BD5D1782203400B47706 /* tuxblocksTests.m */,
+				E999BD571782203400B47706 /* Supporting Files */,
+			);
+			path = tuxblocksTests;
+			sourceTree = "<group>";
+		};
+		E999BD571782203400B47706 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E999BD581782203400B47706 /* tuxblocksTests-Info.plist */,
+				E999BD591782203400B47706 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E999BD1D1782203400B47706 /* tuxblocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E999BD611782203400B47706 /* Build configuration list for PBXNativeTarget "tuxblocks" */;
+			buildPhases = (
+				E999BD1A1782203400B47706 /* Sources */,
+				E999BD1B1782203400B47706 /* Frameworks */,
+				E999BD1C1782203400B47706 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tuxblocks;
+			productName = tuxblocks;
+			productReference = E999BD1E1782203400B47706 /* tuxblocks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E999BD4E1782203400B47706 /* tuxblocksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E999BD641782203400B47706 /* Build configuration list for PBXNativeTarget "tuxblocksTests" */;
+			buildPhases = (
+				E999BD4A1782203400B47706 /* Sources */,
+				E999BD4B1782203400B47706 /* Frameworks */,
+				E999BD4C1782203400B47706 /* Resources */,
+				E999BD4D1782203400B47706 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E999BD551782203400B47706 /* PBXTargetDependency */,
+			);
+			name = tuxblocksTests;
+			productName = tuxblocksTests;
+			productReference = E999BD4F1782203400B47706 /* tuxblocksTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E999BD161782203400B47706 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Thomas;
+			};
+			buildConfigurationList = E999BD191782203400B47706 /* Build configuration list for PBXProject "tuxblocks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E999BD151782203400B47706;
+			productRefGroup = E999BD1F1782203400B47706 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E999BD1D1782203400B47706 /* tuxblocks */,
+				E999BD4E1782203400B47706 /* tuxblocksTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E999BD1C1782203400B47706 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999BD301782203400B47706 /* InfoPlist.strings in Resources */,
+				E999BD381782203400B47706 /* Default.png in Resources */,
+				E999BD3A1782203400B47706 /* Default@2x.png in Resources */,
+				E999BD3C1782203400B47706 /* Default-568h@2x.png in Resources */,
+				E999BD3F1782203400B47706 /* MainStoryboard_iPhone.storyboard in Resources */,
+				E999BD421782203400B47706 /* MainStoryboard_iPad.storyboard in Resources */,
+				E999BD441782203400B47706 /* Shader.fsh in Resources */,
+				E999BD461782203400B47706 /* Shader.vsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E999BD4C1782203400B47706 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999BD5B1782203400B47706 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E999BD4D1782203400B47706 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E999BD1A1782203400B47706 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999BD321782203400B47706 /* main.m in Sources */,
+				E999BD361782203400B47706 /* AppDelegate.m in Sources */,
+				E999BD491782203400B47706 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E999BD4A1782203400B47706 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999BD5E1782203400B47706 /* tuxblocksTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E999BD551782203400B47706 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E999BD1D1782203400B47706 /* tuxblocks */;
+			targetProxy = E999BD541782203400B47706 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E999BD2E1782203400B47706 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E999BD2F1782203400B47706 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E999BD3D1782203400B47706 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E999BD3E1782203400B47706 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E999BD401782203400B47706 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E999BD411782203400B47706 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E999BD591782203400B47706 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E999BD5A1782203400B47706 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E999BD5F1782203400B47706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E999BD601782203400B47706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E999BD621782203400B47706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tuxblocks/tuxblocks-Prefix.pch";
+				INFOPLIST_FILE = "tuxblocks/tuxblocks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E999BD631782203400B47706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tuxblocks/tuxblocks-Prefix.pch";
+				INFOPLIST_FILE = "tuxblocks/tuxblocks-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E999BD651782203400B47706 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tuxblocks.app/tuxblocks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tuxblocks/tuxblocks-Prefix.pch";
+				INFOPLIST_FILE = "tuxblocksTests/tuxblocksTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		E999BD661782203400B47706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tuxblocks.app/tuxblocks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tuxblocks/tuxblocks-Prefix.pch";
+				INFOPLIST_FILE = "tuxblocksTests/tuxblocksTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E999BD191782203400B47706 /* Build configuration list for PBXProject "tuxblocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E999BD5F1782203400B47706 /* Debug */,
+				E999BD601782203400B47706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E999BD611782203400B47706 /* Build configuration list for PBXNativeTarget "tuxblocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E999BD621782203400B47706 /* Debug */,
+				E999BD631782203400B47706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E999BD641782203400B47706 /* Build configuration list for PBXNativeTarget "tuxblocksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E999BD651782203400B47706 /* Debug */,
+				E999BD661782203400B47706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E999BD161782203400B47706 /* Project object */;
+}
