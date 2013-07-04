@@ -8,7 +8,24 @@
 
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
+@class Platform;
 
-@interface ViewController : GLKViewController
+typedef struct {
+    CGPoint geometryVertex;
+    CGPoint textureVertex;
+} TexturedVertex;
+
+typedef struct {
+    TexturedVertex bl;
+    TexturedVertex br;
+    TexturedVertex tl;
+    TexturedVertex tr;
+} TexturedQuad;
+
+@interface ViewController : GLKViewController {
+    Platform* platform;
+    GLKTextureInfo* info;
+    TexturedQuad quad;
+}
 
 @end
