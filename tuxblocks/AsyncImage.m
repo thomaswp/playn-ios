@@ -14,7 +14,7 @@
 @implementation AsyncImage
 
 - (id) initWithContext:(PlaynCoreGlGLContext *)context withFloat:(float)preWidth_ withFloat:(float)preHeight_ {
-    if (self = [super initWithPlaynCoreGlGLContext:ctx_ withCGImage:nil withPlaynCoreGlScale:[PlaynCoreGlScale ONE]]) {
+    if (self = [super initWithPlaynCoreGlGLContext:context withCGImage:nil withPlaynCoreGlScale:[PlaynCoreGlScale ONE]]) {
         preWidth = preWidth_;
         preHeight = preHeight_;
     }
@@ -46,7 +46,7 @@
 - (void) setImageWithId:(id)impl withPlaynCoreGlScale:(PlaynCoreGlScale *)scale {
     image = ((UIImage*) impl).CGImage;
     [self setScale_: scale];
-    callbacks = [PlaynCoreUtilCallbacks dispatchSuccessClearWithJavaUtilList:callbacks withId:self];
+    //callbacks = [PlaynCoreUtilCallbacks dispatchSuccessClearWithJavaUtilList:callbacks withId:self];
 }
 
 - (void) setErrorWithJavaLangThrowable:(JavaLangThrowable *)error_ {

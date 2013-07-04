@@ -22,6 +22,7 @@
 #import "playn/core/util/RunQueue.h"
 #import "playn/core/gl/GLContext.h"
 #import "Graphics.h"
+#import "GLContext.h"
 #import "Assets.h"
 #import "Pointer.h"
 
@@ -39,6 +40,10 @@
 
 - (void) registerPlatform {
     [PlaynCorePlayN setPlatform: self];
+}
+
+- (void) viewDidInitWithInt:(int)defaultFrameBuffer {
+    [[graphics ctx] viewDidInitWithInt:defaultFrameBuffer];
 }
 
 - (void) update {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90282AB178530AF0055E066 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = E90282AA178530AF0055E066 /* GLProgram.m */; };
 		E999BD221782203400B47706 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD211782203400B47706 /* UIKit.framework */; };
 		E999BD241782203400B47706 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD231782203400B47706 /* Foundation.framework */; };
 		E999BD261782203400B47706 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD251782203400B47706 /* CoreGraphics.framework */; };
@@ -273,6 +274,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E90282A9178530AE0055E066 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
+		E90282AA178530AF0055E066 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
 		E999BD1E1782203400B47706 /* tuxblocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tuxblocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E999BD211782203400B47706 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E999BD231782203400B47706 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1415,6 +1418,8 @@
 				E99D596F1784D28B0077140B /* AsyncImage.m */,
 				E99D59711784D5430077140B /* AbstractImage.h */,
 				E99D59721784D5430077140B /* AbstractImage.m */,
+				E90282A9178530AE0055E066 /* GLProgram.h */,
+				E90282AA178530AF0055E066 /* GLProgram.m */,
 			);
 			name = "playn-ios";
 			sourceTree = "<group>";
@@ -1763,6 +1768,7 @@
 				E9AEFF9017847503001B86B6 /* GLContext.m in Sources */,
 				E99D59701784D28C0077140B /* AsyncImage.m in Sources */,
 				E99D59731784D5430077140B /* AbstractImage.m in Sources */,
+				E90282AB178530AF0055E066 /* GLProgram.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

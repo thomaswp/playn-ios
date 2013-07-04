@@ -25,5 +25,6 @@
 - (id) initWithPlatform:(Platform*)platform withInt:(int)screenWidth withInt:(int)screenHeight withFloat:(float)viewScale withFloat:(float)touchScale withBOOL:(BOOL)interpolateCanvasDrawing;
 
 - (void) paint;
+- (GLContext*) ctx;
 
 @end

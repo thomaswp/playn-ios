@@ -203,6 +203,11 @@ GLfloat gCubeVertexData[216] =
     platform = [[[Platform alloc] init] retain];
     [platform registerPlatform];
     
+    GLint defaultFBO;
+    glGetIntegerv(GL_FRAMEBUFFER_BINDING_OES, &defaultFBO);
+    
+    [platform viewDidInitWithInt:defaultFBO];
+    
     PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
     [PlaynCorePlayN runWithPlaynCoreGame:game];
     

@@ -8,6 +8,7 @@
 
 #import "GLContext.h"
 #import <GLKit/GLKit.h>
+#import "GLProgram.h"
 #import "playn/core/InternalTransform.h"
 #import "playn/core/StockInternalTransform.h"
 #import "playn/core/Platform.h"
@@ -17,6 +18,7 @@
 #import "playn/core/gl/GLBuffer.h"
 #import "playn/core/gl/IndexedTrisShader.h"
 #import "playn/core/gl/Scale.h"
+#import "playn/core/gl/GLProgram.h"
 #import "pythagoras/i/Rectangle.h"
 #import "pythagoras/f/FloatMath.h"
 
@@ -93,6 +95,10 @@
     GLboolean params;
     glGetBooleanv((GLenum) param, &params);
     return (BOOL) params;
+}
+
+- (id<PlaynCoreGlGLProgram>) createProgramWithNSString:(NSString *)vertShader withNSString:(NSString *)fragShader {
+    return [[GLProgram alloc] initWithGLContext:self withString:vertShader withString:fragShader];
 }
 
 - (void) deleteFramebufferWithInt:(int)fbuf {

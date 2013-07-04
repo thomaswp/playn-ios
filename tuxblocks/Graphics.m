@@ -38,7 +38,7 @@
     return invertSizes ? screenWidth : screenHeight;
 }
 
-- (PlaynCoreGlGLContext*) ctx {
+- (GLContext*) ctx {
     return ctx;
 }
 

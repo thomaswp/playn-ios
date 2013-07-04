@@ -25,5 +25,6 @@
 - (void) update;
 - (void) paint;
 - (void) registerPlatform;
+- (void) viewDidInitWithInt:(int)defaultFrameBuffer;
 
 @end
