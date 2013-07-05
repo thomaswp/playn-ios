@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E90282AB178530AF0055E066 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = E90282AA178530AF0055E066 /* GLProgram.m */; };
+		E952C0C917871ECC00D1C435 /* GLBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = E952C0C817871ECC00D1C435 /* GLBuffer.m */; };
+		E952C0CC178748AA00D1C435 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E952C0CB178748AA00D1C435 /* Log.m */; };
 		E999BD221782203400B47706 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD211782203400B47706 /* UIKit.framework */; };
 		E999BD241782203400B47706 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD231782203400B47706 /* Foundation.framework */; };
 		E999BD261782203400B47706 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD251782203400B47706 /* CoreGraphics.framework */; };
@@ -276,6 +278,10 @@
 /* Begin PBXFileReference section */
 		E90282A9178530AE0055E066 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
 		E90282AA178530AF0055E066 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
+		E952C0C717871ECC00D1C435 /* GLBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBuffer.h; sourceTree = "<group>"; };
+		E952C0C817871ECC00D1C435 /* GLBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBuffer.m; sourceTree = "<group>"; };
+		E952C0CA178748AA00D1C435 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		E952C0CB178748AA00D1C435 /* Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Log.m; sourceTree = "<group>"; };
 		E999BD1E1782203400B47706 /* tuxblocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tuxblocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E999BD211782203400B47706 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E999BD231782203400B47706 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1420,6 +1426,10 @@
 				E99D59721784D5430077140B /* AbstractImage.m */,
 				E90282A9178530AE0055E066 /* GLProgram.h */,
 				E90282AA178530AF0055E066 /* GLProgram.m */,
+				E952C0C717871ECC00D1C435 /* GLBuffer.h */,
+				E952C0C817871ECC00D1C435 /* GLBuffer.m */,
+				E952C0CA178748AA00D1C435 /* Log.h */,
+				E952C0CB178748AA00D1C435 /* Log.m */,
 			);
 			name = "playn-ios";
 			sourceTree = "<group>";
@@ -1769,6 +1779,8 @@
 				E99D59701784D28C0077140B /* AsyncImage.m in Sources */,
 				E99D59731784D5430077140B /* AbstractImage.m in Sources */,
 				E90282AB178530AF0055E066 /* GLProgram.m in Sources */,
+				E952C0C917871ECC00D1C435 /* GLBuffer.m in Sources */,
+				E952C0CC178748AA00D1C435 /* Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

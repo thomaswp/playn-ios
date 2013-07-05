@@ -8,6 +8,8 @@
 
 #import "Platform.h"
 #import "java/lang/Runnable.h"
+#import "java/lang/Math.h"
+#import "java/lang/System.h"
 #import "playn/core/PlayN.h"
 #import "playn/core/Game.h"
 #import "playn/core/Audio.h"
@@ -25,17 +27,38 @@
 #import "GLContext.h"
 #import "Assets.h"
 #import "Pointer.h"
+#import "Log.h"
 
 @implementation Platform
 
 - (id) init {
     if (self = [super initWithPlaynCoreLog:nil]) {
-        graphics = [[Graphics alloc] initWithPlatform:self withInt:320 withInt:480 withFloat:1 withFloat:1 withBOOL:NO];
+        
+        float deviceScale = [UIScreen mainScreen].scale;
+        CGRect bounds = [UIScreen mainScreen].bounds;
+        int screenWidth = (int)bounds.size.width, screenHeight = (int)bounds.size.height;
+        BOOL useHalfSize = (screenWidth >= 768) && NO; //TODO: support ipad like iphone
+        float viewScale = (useHalfSize ? 2 : 1) * deviceScale;
+        if (useHalfSize) {
+            screenWidth /= 2;
+            screenHeight /= 2;
+        }
+        
+        graphics = [[Graphics alloc] initWithPlatform:self withInt:screenWidth withInt:screenHeight withFloat:viewScale withFloat:deviceScale withBOOL:NO]; //TODO: support interpolation
         assets = [[Assets alloc] initWithPlatform:self];
         pointer = [[Pointer alloc] init];
+        log = [[Log alloc] init];
         lastTick = (int) [self time];
     }
     return self;
+}
+
+- (void) invokeAsyncWithJavaLangRunnable:(id<JavaLangRunnable>)action {
+    [action run]; //TODO: Make this async
+}
+
+- (PlaynCorePlatform_TypeEnum*) type {
+    return [PlaynCorePlatform_TypeEnum IOS];
 }
 
 - (void) registerPlatform {
@@ -44,32 +67,6 @@
 
 - (void) viewDidInitWithInt:(int)defaultFrameBuffer {
     [[graphics ctx] viewDidInitWithInt:defaultFrameBuffer];
-}
-
-- (void) update {
-    [runQueue_ execute];
-    int delta = (int) [self time] - lastTick;
-    elapsedTime += delta;
-    [game tickWithInt: elapsedTime];
-    [[graphics ctx] flush];
-    lastTick += delta;
-}
-
-- (void) paint {
-    [graphics paint];
-}
-
-- (double) time {
-    return CACurrentMediaTime() * 1000;
-}
-
-- (void) runWithPlaynCoreGame:(id<PlaynCoreGame>)game_ {
-    game = game_;
-    [game init__];
-}
-
-- (void) invokeAsyncWithJavaLangRunnable:(id<JavaLangRunnable>)action {
-    [action run]; //TODO: Make this async
 }
 
 - (id<PlaynCoreGraphics>) graphics {
@@ -84,13 +81,44 @@
     return (id<PlaynCorePointer>) pointer;
 }
 
+- (id<PlaynCoreLog>) log {
+    return log;
+}
+
 - (id<PlaynCoreAudio>) audio {
     return nil;
+}
+
+- (float) random {
+    return [JavaLangMath random];
+}
+
+- (double) time {
+    return [JavaLangSystem currentTimeMillis];
 }
 
 - (int) tick {
     return elapsedTime;
 }
 
+- (void) runWithPlaynCoreGame:(id<PlaynCoreGame>)game_ {
+    game = game_;
+    [game init__];
+}
+
+- (void) update {
+    NSLog(@"update");
+    [runQueue_ execute];
+    int delta = (int) [self time] - lastTick;
+    elapsedTime += delta;
+    [game tickWithInt: elapsedTime];
+    [[graphics ctx] flush];
+    lastTick += delta;
+}
+
+- (void) paint {
+    NSLog(@"paint");
+    [graphics paint];
+}
 
 @end

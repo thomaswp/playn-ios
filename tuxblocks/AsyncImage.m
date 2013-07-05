@@ -7,6 +7,7 @@
 //
 
 #import "AsyncImage.h"
+#import "java/util/List.h"
 #import "playn/core/gl/Scale.h"
 #import "playn/core/util/Callback.h"
 #import "playn/core/util/Callbacks.h"
@@ -40,18 +41,21 @@
         [callback onSuccessWithId:self];
     } else {
         callbacks = [PlaynCoreUtilCallbacks createAddWithJavaUtilList:callbacks withPlaynCoreUtilCallback:callback];
+        if (callbacks != nil) [callbacks retain];
     }
 }
 
 - (void) setImageWithId:(id)impl withPlaynCoreGlScale:(PlaynCoreGlScale *)scale {
     image = ((UIImage*) impl).CGImage;
     [self setScale_: scale];
-    //callbacks = [PlaynCoreUtilCallbacks dispatchSuccessClearWithJavaUtilList:callbacks withId:self];
+    [callbacks autorelease];
+    callbacks = [PlaynCoreUtilCallbacks dispatchSuccessClearWithJavaUtilList:callbacks withId:self];
 }
 
 - (void) setErrorWithJavaLangThrowable:(JavaLangThrowable *)error_ {
     error = error_;
     image = [[UIImage alloc] init].CGImage; //TODO create error image
+    [callbacks autorelease];
     callbacks = [PlaynCoreUtilCallbacks dispatchFailureClearWithJavaUtilList:callbacks withJavaLangThrowable:error];
 }
 

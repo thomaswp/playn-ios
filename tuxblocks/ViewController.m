@@ -173,7 +173,6 @@ GLfloat gCubeVertexData[216] =
 //    _rotation += self.timeSinceLastUpdate * 0.5f;
 }
 
-
 - (void)setupGL
 {
     [EAGLContext setCurrentContext:self.context];

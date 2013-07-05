@@ -12,6 +12,7 @@
 @class Graphics;
 @class Assets;
 @class Pointer;
+@class Log;
 
 @interface Platform : PlaynCoreAbstractPlatform {
     int lastTick;
@@ -20,6 +21,7 @@
     Graphics* graphics;
     Assets* assets;
     Pointer* pointer;
+    Log* log;
 }
 
 - (void) update;

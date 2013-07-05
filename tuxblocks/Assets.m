@@ -51,11 +51,15 @@
         //...hope file really does exist!
         
         UIImage* img = [UIImage imageNamed:rsrc.path];
-        if (img != nil) return [recv imageLoadedWithId:img withPlaynCoreGlScale:rsrc.scale_];
+        if (img != nil) {
+            id<PlaynCoreImage> image = [recv imageLoadedWithId:img withPlaynCoreGlScale:rsrc.scale_];
+            [ctx checkGLErrorWithNSString:@"load image"];
+            return image;
+        }
         
-        [[platform log] warnWithNSString:@"Failed to load image"];
     }
     
+    [[platform log] warnWithNSString:@"Failed to load image"];
     return [recv loadFailedWithJavaLangThrowable:nil];
 }
 

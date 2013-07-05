@@ -36,7 +36,7 @@
 }
 
 - (void) getRgbWithInt:(int)startX withInt:(int)startY withInt:(int)width withInt:(int)height withJavaLangIntegerArray:(IOSIntArray *)rgbArray withInt:(int)offset withInt:(int)scanSize {
-    
+    NSLog(@"AbstractImage.getRGB()");
 }
 
 - (id<PlaynCoreImage>) transformWithPlaynCoreImage_BitmapTransformer:(id<PlaynCoreImage_BitmapTransformer>)xform {
@@ -45,11 +45,16 @@
 }
 
 - (void) drawWithId:(id)gc withFloat:(float)dx withFloat:(float)dy withFloat:(float)dw withFloat:(float)dh {
-    NSLog(@"!!!");
+    NSLog(@"AbstractImage.draw1()");
 }
 
 - (void) drawWithId:(id)gc withFloat:(float)dx withFloat:(float)dy withFloat:(float)dw withFloat:(float)dh withFloat:(float)sx withFloat:(float)sy withFloat:(float)sw withFloat:(float)sh {
-    NSLog(@"!!");
+    NSLog(@"AbstractImage.draw2()");
+}
+
+- (id<PlaynCorePattern>) toSubPatternWithPlaynCoreGlAbstractImageGL:(PlaynCoreGlAbstractImageGL *)image withBOOL:(BOOL)repeatX withBOOL:(BOOL)repeatY withFloat:(float)x withFloat:(float)y withFloat:(float)width withFloat:(float)height {
+    NSLog(@"AbstractImage.toSubPattern()");
+    return nil;
 }
 
 

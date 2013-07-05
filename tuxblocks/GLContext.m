@@ -9,6 +9,7 @@
 #import "GLContext.h"
 #import <GLKit/GLKit.h>
 #import "GLProgram.h"
+#import "GLBuffer.h"
 #import "playn/core/InternalTransform.h"
 #import "playn/core/StockInternalTransform.h"
 #import "playn/core/Platform.h"
@@ -19,10 +20,13 @@
 #import "playn/core/gl/IndexedTrisShader.h"
 #import "playn/core/gl/Scale.h"
 #import "playn/core/gl/GLProgram.h"
+#import "playn/core/gl/GLBuffer.h"
 #import "pythagoras/i/Rectangle.h"
 #import "pythagoras/f/FloatMath.h"
 
 @implementation GLContext
+
+BOOL checkErrors = YES;
 
 - (id) initWithPlaynCorePlatform:(id<PlaynCorePlatform>)platform
                        withFloat:(float)scaleFactor {
@@ -44,6 +48,7 @@
     glClearColor(0, 0, 0, 1);
     quadShader = [self createQuadShader];
     trisShader = [[PlaynCoreGlIndexedTrisShader alloc] initWithPlaynCoreGlGLContext:self];
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (BOOL) setOrientationWithUIDeviceOrientation:(UIDeviceOrientation) orientation {
@@ -82,18 +87,21 @@
 - (int) getIntegerWithInt:(int)param {
     GLint params;
     glGetIntegerv((GLenum) param, &params);
+    [self checkGLErrorWithNSString:@"error"];
     return (int) params;
 }
 
 - (float) getFloatWithInt:(int)param {
     GLfloat params;
     glGetFloatv((GLenum) param, &params);
+    [self checkGLErrorWithNSString:@"error"];
     return (float) params;
 }
 
 - (BOOL) getBooleanWithInt:(int)param {
     GLboolean params;
     glGetBooleanv((GLenum) param, &params);
+    [self checkGLErrorWithNSString:@"error"];
     return (BOOL) params;
 }
 
@@ -101,25 +109,40 @@
     return [[GLProgram alloc] initWithGLContext:self withString:vertShader withString:fragShader];
 }
 
+- (id<PlaynCoreGlGLBuffer_Float>) createFloatBufferWithInt:(int)capacity {
+    return [[GLBuffer_FloatImpl alloc] initWithCapacity:capacity];
+}
+
+- (id<PlaynCoreGlGLBuffer_Short>) createShortBufferWithInt:(int)capacity {
+    return [[GLBuffer_ShortImpl alloc] initWithCapacity:capacity];
+}
+
 - (void) deleteFramebufferWithInt:(int)fbuf {
     const GLuint frameBuffers = (GLuint) fbuf;
     glDeleteFramebuffers(1, &frameBuffers);
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (int) createTextureWithBOOL:(BOOL)repeatX withBOOL:(BOOL)repeatY withBOOL:(BOOL)mipmaps {
     GLuint tex;
     glGenTextures(1, &tex);
+    [self checkGLErrorWithNSString:@"error"];
     if (tex == 0) {
         NSLog(@"Attempted to generate texture before GL was initialized");
         return 0;
     }
 
-    GLenum tt = GL_TEXTURE2;
+    GLenum tt = GL_TEXTURE_2D;
     glBindTexture(tt, tex);
+    [self checkGLErrorWithNSString:@"error"];
     glTexParameterf(tt, GL_TEXTURE_MIN_FILTER, [GLContext mipmapifyWithInt:minFilter withBOOL:mipmaps]);
+    [self checkGLErrorWithNSString:@"error"];
     glTexParameterf(tt, GL_TEXTURE_MAG_FILTER, magFilter);
+    [self checkGLErrorWithNSString:@"error"];
     glTexParameterf(tt, GL_TEXTURE_WRAP_S, repeatX ? GL_REPEAT : GL_CLAMP_TO_EDGE);
+    [self checkGLErrorWithNSString:@"error"];
     glTexParameterf(tt, GL_TEXTURE_WRAP_T, repeatY ? GL_REPEAT : GL_CLAMP_TO_EDGE);
+    [self checkGLErrorWithNSString:@"error"];
     
     return tex;
 }
@@ -135,26 +158,31 @@
 - (int) createTextureWithInt:(int)width withInt:(int)height withBOOL:(BOOL)repeatX withBOOL:(BOOL)repeatY withBOOL:(BOOL)mipmaps {
     
     GLuint tex = [self createTextureWithBOOL:repeatX withBOOL:repeatY withBOOL:mipmaps];
-    glTexImage2D(GL_TEXTURE2, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, nil);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, nil);
+    [self checkGLErrorWithNSString:@"error"];
     return tex;
 }
 
 - (void) generateMipmapWithInt:(int)tex {
-    glBindTexture(GL_TEXTURE2, tex);
-    glGenerateMipmap(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_2D, tex);
+    glGenerateMipmap(GL_TEXTURE_2D);
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (void) activeTextureWithInt:(int)glTextureN {
     glActiveTexture((GLenum) glTextureN);
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (void) bindTextureWithInt:(int)tex {
-    glBindTexture(GL_TEXTURE2, tex);
+    glBindTexture(GL_TEXTURE_2D, tex);
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (void) destroyTextureWithInt:(int)tex {
     GLuint texture = tex;
     glDeleteTextures(1, &texture);
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (void) startClippedWithInt:(int)x withInt:(int)y withInt:(int)width withInt:(int)height {
@@ -181,6 +209,7 @@
     if ([self getScissorDepth] == 1) {
         glEnable(GL_SCISSOR_TEST);
     }
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (void) endClipped {
@@ -192,18 +221,21 @@
         glScissor(r.x, r.y, r.width, r.height);
         [self checkGLErrorWithNSString:@"GL.Scissor"];
     }
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (void) clearWithFloat:(float)r withFloat:(float)g withFloat:(float)b withFloat:(float)a {
     glClearColor(r, g, b, a);
     glClear(GL_COLOR_BUFFER_BIT);
+    [self checkGLErrorWithNSString:@"error"];
 }
-
-BOOL checkErrors = false;
 
 - (void) checkGLErrorWithNSString:(NSString *)op {
     if (checkErrors) {
-        //...
+        GLenum error;
+        while ((error = glGetError()) != GL_NO_ERROR) {
+            [[platform_ log] errorWithNSString:[NSString stringWithFormat:@"%@: glError %d", op, error] ];
+        }
     }
 }
 
@@ -225,7 +257,8 @@ BOOL checkErrors = false;
     }
     
     glBindFramebuffer(GL_FRAMEBUFFER, fbuf);
-    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE2, tex, 0);
+    glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, tex, 0);
+    [self checkGLErrorWithNSString:@"error"];
     return fbuf;
 }
 
@@ -234,6 +267,7 @@ BOOL checkErrors = false;
         glBindFramebuffer(GL_FRAMEBUFFER, fbuf);
     }
     glViewport(0, 0, width, height);
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (PlaynCoreGlGLShader*) quadShader {
@@ -266,7 +300,8 @@ BOOL checkErrors = false;
 }
 
 - (void) updateTextureWithInt:(int)tex withInt:(int)width withInt:(int)height withData:(char*)data {
-    glTexImage2D(GL_TEXTURE2, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    [self checkGLErrorWithNSString:@"error"];
 }
 
 - (void) paintWithGroupLayer:(PlaynCoreGlGroupLayerGL *)rootLayer {
