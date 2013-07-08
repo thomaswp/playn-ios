@@ -276,6 +276,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E901B657178A721D00CEC145 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E901B65A178A721D00CEC145 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E901B65B178A721D00CEC145 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E901B65C178A721D00CEC145 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E901B65F178A721D00CEC145 /* tuxblocksCoco-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tuxblocksCoco-Info.plist"; sourceTree = "<group>"; };
+		E901B661178A721D00CEC145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E901B663178A721D00CEC145 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E901B665178A721D00CEC145 /* tuxblocksCoco-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tuxblocksCoco-Prefix.pch"; sourceTree = "<group>"; };
+		E901B667178A721D00CEC145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E901B669178A721D00CEC145 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E901B66A178A721D00CEC145 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E901B66D178A721D00CEC145 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E901B67B178A721D00CEC145 /* tuxblocksCocoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tuxblocksCocoTests-Info.plist"; sourceTree = "<group>"; };
+		E901B67D178A721D00CEC145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E901B67F178A721D00CEC145 /* tuxblocksCocoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tuxblocksCocoTests.h; sourceTree = "<group>"; };
+		E901B680178A721D00CEC145 /* tuxblocksCocoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tuxblocksCocoTests.m; sourceTree = "<group>"; };
 		E90282A9178530AE0055E066 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
 		E90282AA178530AF0055E066 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
 		E952C0C717871ECC00D1C435 /* GLBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBuffer.h; sourceTree = "<group>"; };
@@ -795,6 +811,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E901B659178A721D00CEC145 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E901B65A178A721D00CEC145 /* AppKit.framework */,
+				E901B65B178A721D00CEC145 /* CoreData.framework */,
+				E901B65C178A721D00CEC145 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E901B65D178A721D00CEC145 /* tuxblocksCoco */ = {
+			isa = PBXGroup;
+			children = (
+				E901B669178A721D00CEC145 /* AppDelegate.h */,
+				E901B66A178A721D00CEC145 /* AppDelegate.m */,
+				E901B66C178A721D00CEC145 /* MainMenu.xib */,
+				E901B65E178A721D00CEC145 /* Supporting Files */,
+			);
+			path = tuxblocksCoco;
+			sourceTree = "<group>";
+		};
+		E901B65E178A721D00CEC145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E901B65F178A721D00CEC145 /* tuxblocksCoco-Info.plist */,
+				E901B660178A721D00CEC145 /* InfoPlist.strings */,
+				E901B663178A721D00CEC145 /* main.m */,
+				E901B665178A721D00CEC145 /* tuxblocksCoco-Prefix.pch */,
+				E901B666178A721D00CEC145 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E901B679178A721D00CEC145 /* tuxblocksCocoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E901B67F178A721D00CEC145 /* tuxblocksCocoTests.h */,
+				E901B680178A721D00CEC145 /* tuxblocksCocoTests.m */,
+				E901B67A178A721D00CEC145 /* Supporting Files */,
+			);
+			path = tuxblocksCocoTests;
+			sourceTree = "<group>";
+		};
+		E901B67A178A721D00CEC145 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E901B67B178A721D00CEC145 /* tuxblocksCocoTests-Info.plist */,
+				E901B67C178A721D00CEC145 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E999BD151782203400B47706 = {
 			isa = PBXGroup;
 			children = (
@@ -802,6 +870,8 @@
 				E999BD671782206900B47706 /* libjre_emul.a */,
 				E999BD2B1782203400B47706 /* tuxblocks */,
 				E999BD561782203400B47706 /* tuxblocksTests */,
+				E901B65D178A721D00CEC145 /* tuxblocksCoco */,
+				E901B679178A721D00CEC145 /* tuxblocksCocoTests */,
 				E999BD201782203400B47706 /* Frameworks */,
 				E999BD1F1782203400B47706 /* Products */,
 			);
@@ -825,6 +895,8 @@
 				E999BD271782203400B47706 /* GLKit.framework */,
 				E999BD291782203400B47706 /* OpenGLES.framework */,
 				E999BD501782203400B47706 /* SenTestingKit.framework */,
+				E901B657178A721D00CEC145 /* Cocoa.framework */,
+				E901B659178A721D00CEC145 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1805,6 +1877,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E901B660178A721D00CEC145 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E901B661178A721D00CEC145 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E901B666178A721D00CEC145 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E901B667178A721D00CEC145 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E901B66C178A721D00CEC145 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E901B66D178A721D00CEC145 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		E901B67C178A721D00CEC145 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E901B67D178A721D00CEC145 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		E999BD2E1782203400B47706 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

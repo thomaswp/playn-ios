@@ -48,7 +48,7 @@
         assets = [[Assets alloc] initWithPlatform:self];
         pointer = [[Pointer alloc] init];
         log = [[Log alloc] init];
-        lastTick = (int) [self time];
+        lastTick = [self timeLong];
     }
     return self;
 }
@@ -94,6 +94,10 @@
 }
 
 - (double) time {
+    return (double)[self timeLong];
+}
+
+- (long long) timeLong {
     return [JavaLangSystem currentTimeMillis];
 }
 
@@ -107,9 +111,9 @@
 }
 
 - (void) update {
-    NSLog(@"update");
+//    NSLog(@"update");
     [runQueue_ execute];
-    int delta = (int) [self time] - lastTick;
+    int delta = [self timeLong] - lastTick;
     elapsedTime += delta;
     [game tickWithInt: elapsedTime];
     [[graphics ctx] flush];
@@ -117,7 +121,7 @@
 }
 
 - (void) paint {
-    NSLog(@"paint");
+//    NSLog(@"paint");
     [graphics paint];
 }
 

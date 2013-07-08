@@ -25,7 +25,7 @@
         screenHeight = screenHeight_;
         touchScale = touchScale_;
         interpolateCanvasDrawing = interpolateCanvasDrawing_;
-        ctx = [[GLContext alloc] initWithPlaynCorePlatform: (id<PlaynCorePlatform>) platform withFloat:viewScale_];
+        ctx = [[GLContext alloc] initWithPlaynCorePlatform: (id<PlaynCorePlatform>) platform withFloat:viewScale_ withInt:screenWidth_ withInt:screenHeight_];
         rootLayer = [[PlaynCoreGlGroupLayerGL alloc] initWithPlaynCoreGlGLContext:ctx];
     }
     return self;
@@ -81,7 +81,6 @@
 }
 
 - (void) paint {
-    //NSLog(@"paint");
     [ctx paintWithGroupLayer:rootLayer];
 }
 

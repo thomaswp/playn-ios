@@ -21,6 +21,7 @@
     PlaynCoreGlGLShader *quadShader, *trisShader;
 }
 
+- (id) initWithPlaynCorePlatform:(id<PlaynCorePlatform>)platform withFloat:(float)scaleFactor withInt:(int)screenWidth withInt:(int)screenHeight;
 - (void) viewDidInitWithInt:(int)defaultFramebuffer;
 - (void) paintWithGroupLayer:(PlaynCoreGlGroupLayerGL*)rootLayer;
 - (void) updateTextureWithInt:(int)tex withCGImage:(CGImageRef) image;

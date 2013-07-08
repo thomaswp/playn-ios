@@ -15,7 +15,7 @@
 @class Log;
 
 @interface Platform : PlaynCoreAbstractPlatform {
-    int lastTick;
+    long long lastTick;
     int elapsedTime;
     id<PlaynCoreGame> game;
     Graphics* graphics;

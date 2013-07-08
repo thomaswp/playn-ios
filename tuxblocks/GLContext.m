@@ -29,13 +29,15 @@
 BOOL checkErrors = YES;
 
 - (id) initWithPlaynCorePlatform:(id<PlaynCorePlatform>)platform
-                       withFloat:(float)scaleFactor {
+                       withFloat:(float)scaleFactor withInt:(int)screenWidth withInt:(int)screenHeight {
     if (self = [super initWithPlaynCorePlatform: platform
                                       withFloat: scaleFactor]) {
         minFilter = GL_LINEAR;
         magFilter = GL_LINEAR;
         defaultFramebuffer = -1;
         rootTransform = [[PlaynCoreStockInternalTransform alloc] init];
+        [rootTransform uniformScaleWithFloat:scaleFactor];
+        [self setSizeWithInt:screenWidth withInt:screenHeight];
     }
     return self;
 }
@@ -134,15 +136,10 @@ BOOL checkErrors = YES;
 
     GLenum tt = GL_TEXTURE_2D;
     glBindTexture(tt, tex);
-    [self checkGLErrorWithNSString:@"error"];
     glTexParameterf(tt, GL_TEXTURE_MIN_FILTER, [GLContext mipmapifyWithInt:minFilter withBOOL:mipmaps]);
-    [self checkGLErrorWithNSString:@"error"];
     glTexParameterf(tt, GL_TEXTURE_MAG_FILTER, magFilter);
-    [self checkGLErrorWithNSString:@"error"];
     glTexParameterf(tt, GL_TEXTURE_WRAP_S, repeatX ? GL_REPEAT : GL_CLAMP_TO_EDGE);
-    [self checkGLErrorWithNSString:@"error"];
     glTexParameterf(tt, GL_TEXTURE_WRAP_T, repeatY ? GL_REPEAT : GL_CLAMP_TO_EDGE);
-    [self checkGLErrorWithNSString:@"error"];
     
     return tex;
 }

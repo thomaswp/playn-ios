@@ -142,144 +142,83 @@ GLfloat gCubeVertexData[216] =
 }
 
 
-- (void)update
-{
-    [platform update];
-    
-//    float aspect = fabsf(self.view.bounds.size.width / self.view.bounds.size.height);
-//    GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0f), aspect, 0.1f, 100.0f);
-//    
-//    self.effect.transform.projectionMatrix = projectionMatrix;
-//    
-//    GLKMatrix4 baseModelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -4.0f);
-//    baseModelViewMatrix = GLKMatrix4Rotate(baseModelViewMatrix, _rotation, 0.0f, 1.0f, 0.0f);
-//    
-//    // Compute the model view matrix for the object rendered with GLKit
-//    GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -1.5f);
-//    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, _rotation, 1.0f, 1.0f, 1.0f);
-//    modelViewMatrix = GLKMatrix4Multiply(baseModelViewMatrix, modelViewMatrix);
-//    
-//    self.effect.transform.modelviewMatrix = modelViewMatrix;
-//    
-//    // Compute the model view matrix for the object rendered with ES2
-//    modelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, 1.5f);
-//    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, _rotation, 1.0f, 1.0f, 1.0f);
-//    modelViewMatrix = GLKMatrix4Multiply(baseModelViewMatrix, modelViewMatrix);
-//    
-//    _normalMatrix = GLKMatrix3InvertAndTranspose(GLKMatrix4GetMatrix3(modelViewMatrix), NULL);
-//    
-//    _modelViewProjectionMatrix = GLKMatrix4Multiply(projectionMatrix, modelViewMatrix);
-//    
-//    _rotation += self.timeSinceLastUpdate * 0.5f;
-}
-
 - (void)setupGL
 {
     [EAGLContext setCurrentContext:self.context];
     
-//    [self loadShaders];
-//    
-//    self.effect = [[[GLKBaseEffect alloc] init] autorelease];
-//    self.effect.light0.enabled = GL_TRUE;
-//    self.effect.light0.diffuseColor = GLKVector4Make(1.0f, 0.4f, 0.4f, 1.0f);
-//    
-//    glEnable(GL_DEPTH_TEST);
-//    
-//    glGenVertexArraysOES(1, &_vertexArray);
-//    glBindVertexArrayOES(_vertexArray);
-//    
-//    glGenBuffers(1, &_vertexBuffer);
-//    glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
-//    glBufferData(GL_ARRAY_BUFFER, sizeof(gCubeVertexData), gCubeVertexData, GL_STATIC_DRAW);
-//    
-//    glEnableVertexAttribArray(GLKVertexAttribPosition);
-//    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 24, BUFFER_OFFSET(0));
-//    glEnableVertexAttribArray(GLKVertexAttribNormal);
-//    glVertexAttribPointer(GLKVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, 24, BUFFER_OFFSET(12));
-//    
-//    glBindVertexArrayOES(0);
+//    [self initSample];
     
     platform = [[[Platform alloc] init] retain];
     [platform registerPlatform];
     
-    GLint defaultFBO;
-    glGetIntegerv(GL_FRAMEBUFFER_BINDING_OES, &defaultFBO);
-    
-    [platform viewDidInitWithInt:defaultFBO];
+    [platform viewDidInitWithInt:0];
     
     PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
     [PlaynCorePlayN runWithPlaynCoreGame:game];
-    
-//    NSError *error;
-//    NSDictionary * options = [NSDictionary dictionaryWithObjectsAndKeys:
-//                              [NSNumber numberWithBool:YES],
-//                              GLKTextureLoaderOriginBottomLeft,
-//                              nil];
-//    
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"images/pea.png" ofType:nil];
-//    info = [GLKTextureLoader textureWithContentsOfFile:path options:options error:&error];
-//    [info retain];
-//    
-//    self.effect = [[GLKBaseEffect alloc] init];
-//    GLKMatrix4 projectionMatrix = GLKMatrix4MakeOrtho(0, 320, 0, 480, -1024, 1024);
-//    self.effect.transform.projectionMatrix = projectionMatrix;
-//    
-//    TexturedQuad newQuad;
-//    newQuad.bl.geometryVertex = CGPointMake(0, 0);
-//    newQuad.br.geometryVertex = CGPointMake(info.width, 0);
-//    newQuad.tl.geometryVertex = CGPointMake(0, info.height);
-//    newQuad.tr.geometryVertex = CGPointMake(info.width, info.height);
-//    
-//    newQuad.bl.textureVertex = CGPointMake(0, 0);
-//    newQuad.br.textureVertex = CGPointMake(1, 0);
-//    newQuad.tl.textureVertex = CGPointMake(0, 1);
-//    newQuad.tr.textureVertex = CGPointMake(1, 1);
-//    quad = newQuad;
 }
 
 
+- (void)update
+{
+    [platform update];
+}
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
-//    glClearColor(0.65f, 0.65f, 0.65f, 1.0f);
-//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-//    
-//    glBindVertexArrayOES(_vertexArray);
-    
-    
+//    [self drawSample];
     [platform paint];
+}
+
+- (void) initSample {
+    NSError *error;
+    NSDictionary * options = [NSDictionary dictionaryWithObjectsAndKeys:
+                              [NSNumber numberWithBool:YES],
+                              GLKTextureLoaderOriginBottomLeft,
+                              nil];
     
-//    glClearColor(1, 1, 1, 1);
-//    glClear(GL_COLOR_BUFFER_BIT);
-//    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-//    glEnable(GL_BLEND);
-//    
-//    self.effect.texture2d0.name = info.name;
-//    self.effect.texture2d0.enabled = YES;
-//    
-//    // Render the object with GLKit
-//    [self.effect prepareToDraw];
-//    
-//    glEnableVertexAttribArray(GLKVertexAttribPosition);
-//    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
-//    
-//    // 4
-//    long offset = (long)&quad;
-//    glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, sizeof(TexturedVertex), (void *) (offset + offsetof(TexturedVertex, geometryVertex)));
-//    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(TexturedVertex), (void *) (offset + offsetof(TexturedVertex, textureVertex)));
-//    
-//    // 5
-//    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"images/pea.png" ofType:nil];
+    info = [GLKTextureLoader textureWithContentsOfFile:path options:options error:&error];
+    [info retain];
     
-//    glDrawArrays(GL_TRIANGLES, 0, 36);
-//    
-//    // Render the object again with ES2
-//    glUseProgram(_program);
-//    
-//    glUniformMatrix4fv(uniforms[UNIFORM_MODELVIEWPROJECTION_MATRIX], 1, 0, _modelViewProjectionMatrix.m);
-//    glUniformMatrix3fv(uniforms[UNIFORM_NORMAL_MATRIX], 1, 0, _normalMatrix.m);
-//    
-//    glDrawArrays(GL_TRIANGLES, 0, 36);
+    self.effect = [[GLKBaseEffect alloc] init];
+    GLKMatrix4 projectionMatrix = GLKMatrix4MakeOrtho(0, 320, 0, 480, -1024, 1024);
+    self.effect.transform.projectionMatrix = projectionMatrix;
+    
+    TexturedQuad newQuad;
+    newQuad.bl.geometryVertex = CGPointMake(0, 0);
+    newQuad.br.geometryVertex = CGPointMake(info.width, 0);
+    newQuad.tl.geometryVertex = CGPointMake(0, info.height);
+    newQuad.tr.geometryVertex = CGPointMake(info.width, info.height);
+    
+    newQuad.bl.textureVertex = CGPointMake(0, 0);
+    newQuad.br.textureVertex = CGPointMake(1, 0);
+    newQuad.tl.textureVertex = CGPointMake(0, 1);
+    newQuad.tr.textureVertex = CGPointMake(1, 1);
+    quad = newQuad;
+}
+
+- (void) drawSample {
+    glClearColor(1, 1, 1, 1);
+    glClear(GL_COLOR_BUFFER_BIT);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_BLEND);
+    
+    self.effect.texture2d0.name = info.name;
+    self.effect.texture2d0.enabled = YES;
+    
+    // Render the object with GLKit
+    [self.effect prepareToDraw];
+    
+    glEnableVertexAttribArray(GLKVertexAttribPosition);
+    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
+    
+    // 4
+    long offset = (long)&quad;
+    glVertexAttribPointer(GLKVertexAttribPosition, 2, GL_FLOAT, GL_FALSE, sizeof(TexturedVertex), (void *) (offset + offsetof(TexturedVertex, geometryVertex)));
+    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(TexturedVertex), (void *) (offset + offsetof(TexturedVertex, textureVertex)));
+    
+    // 5
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }
 
 - (void)didReceiveMemoryWarning

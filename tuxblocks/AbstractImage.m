@@ -7,9 +7,13 @@
 //
 
 #import "AbstractImage.h"
+#import <GLKit/GLKit.h>
+#import "ViewController.h"
+#import "GLContext.h"
 #import "playn/core/Image.h"
 #import "playn/core/Pattern.h"
 #import "playn/core/util/Callback.h"
+#import "playn/core/InternalTransform.h"
 
 @implementation AbstractImage
 
