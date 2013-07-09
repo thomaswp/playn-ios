@@ -31,6 +31,8 @@
 
 @implementation Platform
 
+bool DISPLAY_FPS = NO;
+
 - (id) init {
     if (self = [super initWithPlaynCoreLog:nil]) {
         
@@ -46,9 +48,10 @@
         
         graphics = [[Graphics alloc] initWithPlatform:self withInt:screenWidth withInt:screenHeight withFloat:viewScale withFloat:deviceScale withBOOL:NO]; //TODO: support interpolation
         assets = [[Assets alloc] initWithPlatform:self];
-        pointer = [[Pointer alloc] init];
+        pointer = [[Pointer alloc] initWithGraphics:graphics];
         log = [[Log alloc] init];
         lastTick = [self timeLong];
+        lastFPS = lastTick;
     }
     return self;
 }
@@ -123,6 +126,17 @@
 - (void) paint {
 //    NSLog(@"paint");
     [graphics paint];
+    [self updateFPS];
+}
+
+- (void) updateFPS {
+    if (!DISPLAY_FPS) return;
+    frames++;
+    if ([self timeLong] - lastFPS > 1000) {
+        lastFPS += 1000;
+        NSLog(@"%dfps", frames);
+        frames = 0;
+    }
 }
 
 @end

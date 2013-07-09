@@ -7,8 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "playn/core/Pointer.h"
+#import "playn/core/PointerImpl.h"
 
-@interface Pointer : NSObject<PlaynCorePointer>
+@class Graphics;
+
+@interface Pointer : PlaynCorePointerImpl {
+    Graphics* graphics;
+    int _active;
+}
+
+- (id) initWithGraphics:(Graphics*)graphics;
+- (void) onTouchesBeganWithTouches:(NSSet*)touches withEvent:(UIEvent*)event;
+- (void) onTouchesMovedWithTouches:(NSSet*)touches withEvent:(UIEvent*)event;
+- (void) onTouchesEndedWithTouches:(NSSet*)touches withEvent:(UIEvent*)event;
+- (void) onTouchesCancelledWithTouches:(NSSet*)touches withEvent:(UIEvent*)event;
 
 @end

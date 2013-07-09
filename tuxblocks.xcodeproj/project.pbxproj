@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E90282AB178530AF0055E066 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = E90282AA178530AF0055E066 /* GLProgram.m */; };
+		E94A7F80178B2C4D00B2D4A3 /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = E94A7F7F178B2C4D00B2D4A3 /* Canvas.m */; };
+		E94A7F83178B2C5C00B2D4A3 /* CanvasImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E94A7F82178B2C5C00B2D4A3 /* CanvasImage.m */; };
+		E94A7F86178B2C6A00B2D4A3 /* CanvasState.m in Sources */ = {isa = PBXBuildFile; fileRef = E94A7F85178B2C6900B2D4A3 /* CanvasState.m */; };
 		E952C0C917871ECC00D1C435 /* GLBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = E952C0C817871ECC00D1C435 /* GLBuffer.m */; };
 		E952C0CC178748AA00D1C435 /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = E952C0CB178748AA00D1C435 /* Log.m */; };
 		E999BD221782203400B47706 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999BD211782203400B47706 /* UIKit.framework */; };
@@ -294,6 +297,12 @@
 		E901B680178A721D00CEC145 /* tuxblocksCocoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tuxblocksCocoTests.m; sourceTree = "<group>"; };
 		E90282A9178530AE0055E066 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
 		E90282AA178530AF0055E066 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
+		E94A7F7E178B2C4D00B2D4A3 /* Canvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
+		E94A7F7F178B2C4D00B2D4A3 /* Canvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Canvas.m; sourceTree = "<group>"; };
+		E94A7F81178B2C5B00B2D4A3 /* CanvasImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasImage.h; sourceTree = "<group>"; };
+		E94A7F82178B2C5C00B2D4A3 /* CanvasImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasImage.m; sourceTree = "<group>"; };
+		E94A7F84178B2C6900B2D4A3 /* CanvasState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasState.h; sourceTree = "<group>"; };
+		E94A7F85178B2C6900B2D4A3 /* CanvasState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasState.m; sourceTree = "<group>"; };
 		E952C0C717871ECC00D1C435 /* GLBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBuffer.h; sourceTree = "<group>"; };
 		E952C0C817871ECC00D1C435 /* GLBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLBuffer.m; sourceTree = "<group>"; };
 		E952C0CA178748AA00D1C435 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
@@ -1502,6 +1511,12 @@
 				E952C0C817871ECC00D1C435 /* GLBuffer.m */,
 				E952C0CA178748AA00D1C435 /* Log.h */,
 				E952C0CB178748AA00D1C435 /* Log.m */,
+				E94A7F7E178B2C4D00B2D4A3 /* Canvas.h */,
+				E94A7F7F178B2C4D00B2D4A3 /* Canvas.m */,
+				E94A7F81178B2C5B00B2D4A3 /* CanvasImage.h */,
+				E94A7F82178B2C5C00B2D4A3 /* CanvasImage.m */,
+				E94A7F84178B2C6900B2D4A3 /* CanvasState.h */,
+				E94A7F85178B2C6900B2D4A3 /* CanvasState.m */,
 			);
 			name = "playn-ios";
 			sourceTree = "<group>";
@@ -1853,6 +1868,9 @@
 				E90282AB178530AF0055E066 /* GLProgram.m in Sources */,
 				E952C0C917871ECC00D1C435 /* GLBuffer.m in Sources */,
 				E952C0CC178748AA00D1C435 /* Log.m in Sources */,
+				E94A7F80178B2C4D00B2D4A3 /* Canvas.m in Sources */,
+				E94A7F83178B2C5C00B2D4A3 /* CanvasImage.m in Sources */,
+				E94A7F86178B2C6A00B2D4A3 /* CanvasState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

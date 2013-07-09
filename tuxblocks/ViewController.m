@@ -13,6 +13,7 @@
 #import "HelloGame.h"
 #import "PlayN.h"
 #import "Platform.h"
+#import "Pointer.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -145,6 +146,7 @@ GLfloat gCubeVertexData[216] =
 - (void)setupGL
 {
     [EAGLContext setCurrentContext:self.context];
+    self.preferredFramesPerSecond = 60;
     
 //    [self initSample];
     
@@ -167,6 +169,26 @@ GLfloat gCubeVertexData[216] =
 {
 //    [self drawSample];
     [platform paint];
+}
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    Pointer* pointer = (Pointer*) [platform pointer];
+    [pointer onTouchesBeganWithTouches:touches withEvent:event];
+}
+
+- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    Pointer* pointer = (Pointer*) [platform pointer];
+    [pointer onTouchesMovedWithTouches:touches withEvent:event];
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    Pointer* pointer = (Pointer*) [platform pointer];
+    [pointer onTouchesEndedWithTouches:touches withEvent:event];
+}
+
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    Pointer* pointer = (Pointer*) [platform pointer];
+    [pointer onTouchesCancelledWithTouches:touches withEvent:event];
 }
 
 - (void) initSample {

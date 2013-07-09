@@ -22,6 +22,8 @@
     Assets* assets;
     Pointer* pointer;
     Log* log;
+    int frames;
+    long long lastFPS;
 }
 
 - (void) update;

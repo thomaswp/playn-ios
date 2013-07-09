@@ -12,6 +12,8 @@
 @class PlaynCoreGlGroupLayerGL;
 @class GLContext;
 @class Platform;
+@class PythagorasFPoint;
+@protocol PythagorasFIPoint;
 
 @interface Graphics : PlaynCoreGlGraphicsGL {
     PlaynCoreGlGroupLayerGL* rootLayer;
@@ -20,11 +22,13 @@
     float touchScale;
     BOOL invertSizes;
     BOOL interpolateCanvasDrawing;
+    PythagorasFPoint* touchTemp;
 }
 
 - (id) initWithPlatform:(Platform*)platform withInt:(int)screenWidth withInt:(int)screenHeight withFloat:(float)viewScale withFloat:(float)touchScale withBOOL:(BOOL)interpolateCanvasDrawing;
 
 - (void) paint;
 - (GLContext*) ctx;
+- (id<PythagorasFIPoint>) transformTouchWithX:(float)x withY:(int)y;
 
 @end

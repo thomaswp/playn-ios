@@ -7,11 +7,14 @@
 //
 
 #import "Graphics.h"
+#import "pythagoras/f/IPoint.h"
+#import "pythagoras/f/Point.h"
 #import "playn/core/ImageLayer.h"
 #import "playn/core/CanvasImage.h"
 #import "playn/core/Gradient.h"
 #import "playn/core/Font.h"
 #import "playn/core/TextLayout.h"
+#import "playn/core/InternalTransform.h"
 #import "playn/core/gl/GLContext.h"
 #import "playn/core/gl/GroupLayerGL.h"
 #import "playn/core/gl/GL20.h"
@@ -27,6 +30,7 @@
         interpolateCanvasDrawing = interpolateCanvasDrawing_;
         ctx = [[GLContext alloc] initWithPlaynCorePlatform: (id<PlaynCorePlatform>) platform withFloat:viewScale_ withInt:screenWidth_ withInt:screenHeight_];
         rootLayer = [[PlaynCoreGlGroupLayerGL alloc] initWithPlaynCoreGlGLContext:ctx];
+        touchTemp = [[[PythagorasFPoint alloc] init] retain];
     }
     return self;
 }
@@ -78,6 +82,11 @@
 
 - (GLContext*) ctx {
     return ctx;
+}
+
+- (id<PythagorasFIPoint>) transformTouchWithX:(float)x withY:(int)y {
+    [touchTemp setWithFloat:x * touchScale withFloat:y * touchScale];
+    return [[ctx rootTransform] inverseTransformWithPythagorasFIPoint:touchTemp withPythagorasFPoint:touchTemp];
 }
 
 - (void) paint {
