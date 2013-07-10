@@ -674,7 +674,7 @@
 
 - (void)copyAllPropertiesTo:(id)copy {
   [super copyAllPropertiesTo:copy];
-  PythagorasDCrossing_QuadCurve *typedCopy = (PythagorasDCrossing_QuadCurve *) copy;
+//  PythagorasDCrossing_QuadCurve *typedCopy = (PythagorasDCrossing_QuadCurve *) copy;
 //  typedCopy.ax = ax_;
 //  typedCopy.ay = ay_;
 //  typedCopy.bx = bx_;
@@ -812,7 +812,7 @@
 
 - (void)copyAllPropertiesTo:(id)copy {
   [super copyAllPropertiesTo:copy];
-  PythagorasDCrossing_CubicCurveH *typedCopy = (PythagorasDCrossing_CubicCurveH *) copy;
+//  PythagorasDCrossing_CubicCurveH *typedCopy = (PythagorasDCrossing_CubicCurveH *) copy;
 //  typedCopy.ax = ax_;
 //  typedCopy.ay = ay_;
 //  typedCopy.bx = bx_;
