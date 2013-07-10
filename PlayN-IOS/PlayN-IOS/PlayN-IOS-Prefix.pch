@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'PlayN-IOS' target in the 'PlayN-IOS' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
