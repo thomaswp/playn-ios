@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "playn/sample/hello/core/HelloGame.h"
+#import "tuxkids/tuxblocks/core/TuxBlocksGame.h"
 #import "playn/core/PlayN.h"
 
 
@@ -16,7 +17,8 @@
 - (void) viewDidLoad {
     [@"Hello" replace:@"moo" withSequence:@"go"];
     [super viewDidLoad];
-    PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
+//    PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
+    TuxkidsTuxblocksCoreTuxBlocksGame* game = [[TuxkidsTuxblocksCoreTuxBlocksGame alloc] init];
     [PlaynCorePlayN runWithPlaynCoreGame:game];
 }
 
