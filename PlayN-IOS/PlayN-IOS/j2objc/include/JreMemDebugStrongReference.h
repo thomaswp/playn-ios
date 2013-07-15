@@ -16,9 +16,6 @@
 // Strong reference info.
 //
 
-#ifndef _JreMemDebugStrongReference_H_
-#define _JreMemDebugStrongReference_H_
-
 #import <Foundation/Foundation.h>
 
 @interface JreMemDebugStrongReference : NSObject
@@ -34,5 +31,3 @@
 #endif
 
 @end
-
-#endif // _JreMemDebugStrongReference_H_

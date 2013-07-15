@@ -19,9 +19,6 @@
 //  Created by Tom Ball on 6/16/11.
 //
 
-#ifndef _IOSBooleanArray_H_
-#define _IOSBooleanArray_H_
-
 #import "IOSArray.h"
 
 // An emulation class that represents a Java boolean array.  Like a Java array,
@@ -38,7 +35,6 @@
 // Return boolean at a specified index, throws IndexOutOfBoundsException
 // if out out range.
 - (BOOL)booleanAtIndex:(NSUInteger)index;
-- (BOOL *)booleanRefAtIndex:(NSUInteger)index;
 
 // Sets boolean at a specified index, throws IndexOutOfBoundsException
 // if out out range.  Returns replacement value.
@@ -51,4 +47,3 @@
 
 @end
 
-#endif // _IOSBooleanArray_H_

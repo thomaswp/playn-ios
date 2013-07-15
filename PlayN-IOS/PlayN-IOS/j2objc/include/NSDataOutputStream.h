@@ -6,9 +6,6 @@
 //
 //
 
-#ifndef _NSDataOutputStream_H_
-#define _NSDataOutputStream_H_
-
 #import <Foundation/Foundation.h>
 
 #import "java/io/OutputStream.h"
@@ -25,5 +22,3 @@
 - (NSData *)data;
 
 @end
-
-#endif // _NSDataOutputStream_H_

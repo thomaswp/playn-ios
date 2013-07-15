@@ -19,9 +19,6 @@
 //  Created by Tom Ball on 6/16/11.
 //
 
-#ifndef _IOSDoubleArray_H_
-#define _IOSDoubleArray_H_
-
 #import "IOSArray.h"
 
 // An emulation class that represents a Java double array.  Like a Java array,
@@ -38,7 +35,6 @@
 // Return double at a specified index, throws IndexOutOfBoundsException
 // if out out range.
 - (double)doubleAtIndex:(NSUInteger)index;
-- (double *)doubleRefAtIndex:(NSUInteger)index;
 
 // Sets double at a specified index, throws IndexOutOfBoundsException
 // if out out range.  Returns replacement value.
@@ -65,4 +61,3 @@
 
 @end
 
-#endif // _IOSDoubleArray_H_

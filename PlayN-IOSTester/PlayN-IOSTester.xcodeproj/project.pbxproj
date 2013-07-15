@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E907868F17947E0200FFDA0C /* CuteGame.m in Sources */ = {isa = PBXBuildFile; fileRef = E907868717947E0200FFDA0C /* CuteGame.m */; };
+		E907869017947E0200FFDA0C /* CuteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E907868917947E0200FFDA0C /* CuteObject.m */; };
+		E907869117947E0200FFDA0C /* CuteWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = E907868B17947E0200FFDA0C /* CuteWorld.m */; };
+		E907869217947E0200FFDA0C /* Protocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E907868E17947E0200FFDA0C /* Protocol.m */; };
 		E9C4C64E178E5A3000A6EBE5 /* CanvasParticleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C577178E5A3000A6EBE5 /* CanvasParticleRenderer.m */; };
 		E9C4C64F178E5A3000A6EBE5 /* GLStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C579178E5A3000A6EBE5 /* GLStatus.m */; };
 		E9C4C650178E5A3000A6EBE5 /* Angle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C57C178E5A3000A6EBE5 /* Angle.m */; };
@@ -146,6 +150,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E907868617947E0200FFDA0C /* CuteGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuteGame.h; sourceTree = "<group>"; };
+		E907868717947E0200FFDA0C /* CuteGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuteGame.m; sourceTree = "<group>"; };
+		E907868817947E0200FFDA0C /* CuteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuteObject.h; sourceTree = "<group>"; };
+		E907868917947E0200FFDA0C /* CuteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuteObject.m; sourceTree = "<group>"; };
+		E907868A17947E0200FFDA0C /* CuteWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuteWorld.h; sourceTree = "<group>"; };
+		E907868B17947E0200FFDA0C /* CuteWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuteWorld.m; sourceTree = "<group>"; };
+		E907868D17947E0200FFDA0C /* Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
+		E907868E17947E0200FFDA0C /* Protocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Protocol.m; sourceTree = "<group>"; };
 		E9C4C576178E5A3000A6EBE5 /* CanvasParticleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasParticleRenderer.h; sourceTree = "<group>"; };
 		E9C4C577178E5A3000A6EBE5 /* CanvasParticleRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasParticleRenderer.m; sourceTree = "<group>"; };
 		E9C4C578178E5A3000A6EBE5 /* GLStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLStatus.h; sourceTree = "<group>"; };
@@ -390,6 +402,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E907868417947E0200FFDA0C /* cute */ = {
+			isa = PBXGroup;
+			children = (
+				E907868517947E0200FFDA0C /* core */,
+				E907868C17947E0200FFDA0C /* shared */,
+			);
+			path = cute;
+			sourceTree = "<group>";
+		};
+		E907868517947E0200FFDA0C /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E907868617947E0200FFDA0C /* CuteGame.h */,
+				E907868717947E0200FFDA0C /* CuteGame.m */,
+				E907868817947E0200FFDA0C /* CuteObject.h */,
+				E907868917947E0200FFDA0C /* CuteObject.m */,
+				E907868A17947E0200FFDA0C /* CuteWorld.h */,
+				E907868B17947E0200FFDA0C /* CuteWorld.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		E907868C17947E0200FFDA0C /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				E907868D17947E0200FFDA0C /* Protocol.h */,
+				E907868E17947E0200FFDA0C /* Protocol.m */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
 		E9C4C574178E5A3000A6EBE5 /* tripleplay */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,6 +864,7 @@
 		E9D0D3AD178DE99A0099C6DF /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				E907868417947E0200FFDA0C /* cute */,
 				E9D0D3AE178DE99A0099C6DF /* hello */,
 			);
 			path = sample;
@@ -1044,6 +1088,10 @@
 				E9C4C6AE178E5A3000A6EBE5 /* MultiList.m in Sources */,
 				E9C4C6AF178E5A3000A6EBE5 /* Positioned.m in Sources */,
 				E9C4C6B0178E5A3000A6EBE5 /* Sobol.m in Sources */,
+				E907868F17947E0200FFDA0C /* CuteGame.m in Sources */,
+				E907869017947E0200FFDA0C /* CuteObject.m in Sources */,
+				E907869117947E0200FFDA0C /* CuteWorld.m in Sources */,
+				E907869217947E0200FFDA0C /* Protocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

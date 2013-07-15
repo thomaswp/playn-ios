@@ -17,18 +17,18 @@
 // the 'JreEmulation' project.
 //
 
-#ifndef _JreEmulation_H_
-#define _JreEmulation_H_
-
 #ifndef __has_feature
 #define __has_feature(x) 0  // Compatibility with non-clang compilers.
 #endif
 
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
+#import "IOSArray.h"
+#import "IOSClass.h"
 #import "JavaObject.h"
 #import "NSObject+JavaObject.h"
 #import "NSString+JavaString.h"
+#import <fcntl.h>
 #import "JreMemDebug.h"
 
 # ifndef __has_attribute
@@ -93,16 +93,4 @@ FOUNDATION_EXPORT
 
 FOUNDATION_EXPORT id JreOperatorRetainedAssign(id *pIvar, id self, id value);
 
-#define UR_SHIFT_ASSIGN_DEFN(NAME, TYPE) \
-  static inline TYPE URShiftAssign##NAME(TYPE *pLhs, int rhs) { \
-    return *pLhs = (TYPE) (((unsigned TYPE) *pLhs) >> rhs); \
-  }
-
-UR_SHIFT_ASSIGN_DEFN(Byte, char)
-UR_SHIFT_ASSIGN_DEFN(Int, int)
-UR_SHIFT_ASSIGN_DEFN(Long, long long)
-UR_SHIFT_ASSIGN_DEFN(Short, short int)
-
 #endif // __OBJC__
-
-#endif // _JreEmulation_H_

@@ -6,13 +6,10 @@
 //  Copyright 2012 Google, Inc. All rights reserved.
 //
 
-#ifndef _JavaUtilHashMap_H_
-#define _JavaUtilHashMap_H_
-
 #import <Foundation/Foundation.h>
-#include "java/io/Serializable.h"
-#include "java/util/AbstractMap.h"
-#include "java/util/Map.h"
+#import "java/io/Serializable.h"
+#import "java/util/AbstractMap.h"
+#import "java/util/Map.h"
 
 @class JavaUtilHashMap_Entry;
 
@@ -25,5 +22,3 @@
 - (id)initWithJavaUtilMap:(id<JavaUtilMap>)map;
 
 @end
-
-#endif // _JavaUtilHashMap_H_

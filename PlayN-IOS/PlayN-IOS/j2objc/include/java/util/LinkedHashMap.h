@@ -6,15 +6,13 @@
 //  Copyright 2012 Google, Inc. All rights reserved.
 //
 
-#ifndef _JavaUtilLinkedHashMap_H_
-#define _JavaUtilLinkedHashMap_H_
-
-#include "JreEmulation.h"
-#include "java/util/AbstractCollection.h"
-#include "java/util/AbstractSet.h"
-#include "java/util/HashMap.h"
-#include "java/util/Iterator.h"
-#include "java/util/Map.h"
+#import "JreEmulation.h"
+#import "java/util/AbstractCollection.h"
+#import "java/util/AbstractSet.h"
+#import "java/util/HashMap.h"
+#import "java/util/Iterator.h"
+#import "java/util/LinkedHashMap.h"
+#import "java/util/Map.h"
 
 @interface JavaUtilLinkedHashMap : JavaUtilHashMap < JavaUtilMap >
 
@@ -23,5 +21,3 @@
          withBOOL:(BOOL)accessOrder;
 
 @end
-
-#endif // _JavaUtilLinkedHashMap_H_

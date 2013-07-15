@@ -36,14 +36,9 @@
 // Initializes this array with a specified array size.
 - (id)initWithLength:(NSUInteger)length;
 
-+ (id)arrayWithLength:(NSUInteger)length;
-
 // Create an empty multi-dimensional array.
 + (id)arrayWithDimensions:(NSUInteger)dimensionCount
-                  lengths:(const int *)dimensionLengths;
-
-+ (id)iosClass;
-+ (id)iosClassWithDimensions:(NSUInteger)dimensions;
+                  lengths:(NSUInteger *)dimensionLengths;
 
 // Returns the size of this array.
 - (NSUInteger)count;

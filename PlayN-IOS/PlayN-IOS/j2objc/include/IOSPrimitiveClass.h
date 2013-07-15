@@ -19,9 +19,6 @@
 //  Created by Tom Ball on 1/22/12.
 //
 
-#ifndef _IOSPrimitiveClass_H_
-#define _IOSPrimitiveClass_H_
-
 #import <Foundation/Foundation.h>
 #import "IOSClass.h"
 
@@ -36,5 +33,3 @@
 - (id)initWithName:(NSString *)name type:(NSString *)type;
 
 @end
-
-#endif // _IOSPrimitiveClass_H_
