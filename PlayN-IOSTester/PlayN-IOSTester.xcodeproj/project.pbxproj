@@ -11,6 +11,17 @@
 		E907869017947E0200FFDA0C /* CuteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E907868917947E0200FFDA0C /* CuteObject.m */; };
 		E907869117947E0200FFDA0C /* CuteWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = E907868B17947E0200FFDA0C /* CuteWorld.m */; };
 		E907869217947E0200FFDA0C /* Protocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E907868E17947E0200FFDA0C /* Protocol.m */; };
+		E90786F9179481EC00FFDA0C /* Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786D6179481EC00FFDA0C /* Demo.m */; };
+		E90786FA179481EC00FFDA0C /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786D8179481EC00FFDA0C /* Menu.m */; };
+		E90786FF179481EC00FFDA0C /* Showcase.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786E4179481EC00FFDA0C /* Showcase.m */; };
+		E9078700179481EC00FFDA0C /* SnakeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786E7179481EC00FFDA0C /* SnakeDemo.m */; };
+		E9078701179481EC00FFDA0C /* Pea.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786EA179481EC00FFDA0C /* Pea.m */; };
+		E9078702179481EC00FFDA0C /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786EC179481EC00FFDA0C /* Sprite.m */; };
+		E9078703179481EC00FFDA0C /* SpriteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786EE179481EC00FFDA0C /* SpriteImage.m */; };
+		E9078704179481EC00FFDA0C /* SpriteLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786F0179481EC00FFDA0C /* SpriteLoader.m */; };
+		E9078705179481EC00FFDA0C /* SpritesDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786F2179481EC00FFDA0C /* SpritesDemo.m */; };
+		E9078706179481EC00FFDA0C /* SwirlDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786F5179481EC00FFDA0C /* SwirlDemo.m */; };
+		E9078707179481EC00FFDA0C /* TextDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786F8179481EC00FFDA0C /* TextDemo.m */; };
 		E9C4C64E178E5A3000A6EBE5 /* CanvasParticleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C577178E5A3000A6EBE5 /* CanvasParticleRenderer.m */; };
 		E9C4C64F178E5A3000A6EBE5 /* GLStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C579178E5A3000A6EBE5 /* GLStatus.m */; };
 		E9C4C650178E5A3000A6EBE5 /* Angle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C57C178E5A3000A6EBE5 /* Angle.m */; };
@@ -158,6 +169,28 @@
 		E907868B17947E0200FFDA0C /* CuteWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuteWorld.m; sourceTree = "<group>"; };
 		E907868D17947E0200FFDA0C /* Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 		E907868E17947E0200FFDA0C /* Protocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Protocol.m; sourceTree = "<group>"; };
+		E90786D5179481EC00FFDA0C /* Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo.h; sourceTree = "<group>"; };
+		E90786D6179481EC00FFDA0C /* Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo.m; sourceTree = "<group>"; };
+		E90786D7179481EC00FFDA0C /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		E90786D8179481EC00FFDA0C /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
+		E90786E3179481EC00FFDA0C /* Showcase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Showcase.h; sourceTree = "<group>"; };
+		E90786E4179481EC00FFDA0C /* Showcase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Showcase.m; sourceTree = "<group>"; };
+		E90786E6179481EC00FFDA0C /* SnakeDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnakeDemo.h; sourceTree = "<group>"; };
+		E90786E7179481EC00FFDA0C /* SnakeDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnakeDemo.m; sourceTree = "<group>"; };
+		E90786E9179481EC00FFDA0C /* Pea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pea.h; sourceTree = "<group>"; };
+		E90786EA179481EC00FFDA0C /* Pea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pea.m; sourceTree = "<group>"; };
+		E90786EB179481EC00FFDA0C /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
+		E90786EC179481EC00FFDA0C /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sprite.m; sourceTree = "<group>"; };
+		E90786ED179481EC00FFDA0C /* SpriteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteImage.h; sourceTree = "<group>"; };
+		E90786EE179481EC00FFDA0C /* SpriteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteImage.m; sourceTree = "<group>"; };
+		E90786EF179481EC00FFDA0C /* SpriteLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteLoader.h; sourceTree = "<group>"; };
+		E90786F0179481EC00FFDA0C /* SpriteLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteLoader.m; sourceTree = "<group>"; };
+		E90786F1179481EC00FFDA0C /* SpritesDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpritesDemo.h; sourceTree = "<group>"; };
+		E90786F2179481EC00FFDA0C /* SpritesDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpritesDemo.m; sourceTree = "<group>"; };
+		E90786F4179481EC00FFDA0C /* SwirlDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwirlDemo.h; sourceTree = "<group>"; };
+		E90786F5179481EC00FFDA0C /* SwirlDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwirlDemo.m; sourceTree = "<group>"; };
+		E90786F7179481EC00FFDA0C /* TextDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextDemo.h; sourceTree = "<group>"; };
+		E90786F8179481EC00FFDA0C /* TextDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextDemo.m; sourceTree = "<group>"; };
 		E9C4C576178E5A3000A6EBE5 /* CanvasParticleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasParticleRenderer.h; sourceTree = "<group>"; };
 		E9C4C577178E5A3000A6EBE5 /* CanvasParticleRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasParticleRenderer.m; sourceTree = "<group>"; };
 		E9C4C578178E5A3000A6EBE5 /* GLStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLStatus.h; sourceTree = "<group>"; };
@@ -431,6 +464,75 @@
 				E907868E17947E0200FFDA0C /* Protocol.m */,
 			);
 			path = shared;
+			sourceTree = "<group>";
+		};
+		E90786D3179481EC00FFDA0C /* showcase */ = {
+			isa = PBXGroup;
+			children = (
+				E90786D4179481EC00FFDA0C /* core */,
+			);
+			path = showcase;
+			sourceTree = "<group>";
+		};
+		E90786D4179481EC00FFDA0C /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E90786D5179481EC00FFDA0C /* Demo.h */,
+				E90786D6179481EC00FFDA0C /* Demo.m */,
+				E90786D7179481EC00FFDA0C /* Menu.h */,
+				E90786D8179481EC00FFDA0C /* Menu.m */,
+				E90786E3179481EC00FFDA0C /* Showcase.h */,
+				E90786E4179481EC00FFDA0C /* Showcase.m */,
+				E90786E5179481EC00FFDA0C /* snake */,
+				E90786E8179481EC00FFDA0C /* sprites */,
+				E90786F3179481EC00FFDA0C /* swirl */,
+				E90786F6179481EC00FFDA0C /* text */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		E90786E5179481EC00FFDA0C /* snake */ = {
+			isa = PBXGroup;
+			children = (
+				E90786E6179481EC00FFDA0C /* SnakeDemo.h */,
+				E90786E7179481EC00FFDA0C /* SnakeDemo.m */,
+			);
+			path = snake;
+			sourceTree = "<group>";
+		};
+		E90786E8179481EC00FFDA0C /* sprites */ = {
+			isa = PBXGroup;
+			children = (
+				E90786E9179481EC00FFDA0C /* Pea.h */,
+				E90786EA179481EC00FFDA0C /* Pea.m */,
+				E90786EB179481EC00FFDA0C /* Sprite.h */,
+				E90786EC179481EC00FFDA0C /* Sprite.m */,
+				E90786ED179481EC00FFDA0C /* SpriteImage.h */,
+				E90786EE179481EC00FFDA0C /* SpriteImage.m */,
+				E90786EF179481EC00FFDA0C /* SpriteLoader.h */,
+				E90786F0179481EC00FFDA0C /* SpriteLoader.m */,
+				E90786F1179481EC00FFDA0C /* SpritesDemo.h */,
+				E90786F2179481EC00FFDA0C /* SpritesDemo.m */,
+			);
+			path = sprites;
+			sourceTree = "<group>";
+		};
+		E90786F3179481EC00FFDA0C /* swirl */ = {
+			isa = PBXGroup;
+			children = (
+				E90786F4179481EC00FFDA0C /* SwirlDemo.h */,
+				E90786F5179481EC00FFDA0C /* SwirlDemo.m */,
+			);
+			path = swirl;
+			sourceTree = "<group>";
+		};
+		E90786F6179481EC00FFDA0C /* text */ = {
+			isa = PBXGroup;
+			children = (
+				E90786F7179481EC00FFDA0C /* TextDemo.h */,
+				E90786F8179481EC00FFDA0C /* TextDemo.m */,
+			);
+			path = text;
 			sourceTree = "<group>";
 		};
 		E9C4C574178E5A3000A6EBE5 /* tripleplay */ = {
@@ -856,6 +958,7 @@
 		E9D0D3AC178DE99A0099C6DF /* playn */ = {
 			isa = PBXGroup;
 			children = (
+				E90786D3179481EC00FFDA0C /* showcase */,
 				E9D0D3AD178DE99A0099C6DF /* sample */,
 			);
 			path = playn;
@@ -1092,6 +1195,17 @@
 				E907869017947E0200FFDA0C /* CuteObject.m in Sources */,
 				E907869117947E0200FFDA0C /* CuteWorld.m in Sources */,
 				E907869217947E0200FFDA0C /* Protocol.m in Sources */,
+				E90786F9179481EC00FFDA0C /* Demo.m in Sources */,
+				E90786FA179481EC00FFDA0C /* Menu.m in Sources */,
+				E90786FF179481EC00FFDA0C /* Showcase.m in Sources */,
+				E9078700179481EC00FFDA0C /* SnakeDemo.m in Sources */,
+				E9078701179481EC00FFDA0C /* Pea.m in Sources */,
+				E9078702179481EC00FFDA0C /* Sprite.m in Sources */,
+				E9078703179481EC00FFDA0C /* SpriteImage.m in Sources */,
+				E9078704179481EC00FFDA0C /* SpriteLoader.m in Sources */,
+				E9078705179481EC00FFDA0C /* SpritesDemo.m in Sources */,
+				E9078706179481EC00FFDA0C /* SwirlDemo.m in Sources */,
+				E9078707179481EC00FFDA0C /* TextDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

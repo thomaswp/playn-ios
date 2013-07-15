@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E907870A1794830700FFDA0C /* IOSTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = E90787091794830700FFDA0C /* IOSTouch.m */; };
+		E907871017948FAE00FFDA0C /* IOSSound.m in Sources */ = {isa = PBXBuildFile; fileRef = E907870F17948FAD00FFDA0C /* IOSSound.m */; };
+		E907871317948FE400FFDA0C /* IOSTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E907871217948FE400FFDA0C /* IOSTextLayout.m */; };
 		E96B4EE61790AD9200D899B3 /* IOSKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */; };
 		E9A77B8B178DCF27002BB058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A77B8A178DCF27002BB058 /* Foundation.framework */; };
 		E9A77DF1178DCF6F002BB058 /* AbstractAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77B9B178DCF6E002BB058 /* AbstractAssets.m */; };
@@ -524,6 +527,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E90787081794830700FFDA0C /* IOSTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSTouch.h; path = include/IOSTouch.h; sourceTree = "<group>"; };
+		E90787091794830700FFDA0C /* IOSTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSTouch.m; path = include/IOSTouch.m; sourceTree = "<group>"; };
+		E907870E17948FAD00FFDA0C /* IOSSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSSound.h; path = include/IOSSound.h; sourceTree = "<group>"; };
+		E907870F17948FAD00FFDA0C /* IOSSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSSound.m; path = include/IOSSound.m; sourceTree = "<group>"; };
+		E907871117948FE400FFDA0C /* IOSTextLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSTextLayout.h; path = include/IOSTextLayout.h; sourceTree = "<group>"; };
+		E907871217948FE400FFDA0C /* IOSTextLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSTextLayout.m; path = include/IOSTextLayout.m; sourceTree = "<group>"; };
 		E96B4EE41790AD9200D899B3 /* IOSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSKeyboard.h; path = include/IOSKeyboard.h; sourceTree = "<group>"; };
 		E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSKeyboard.m; path = include/IOSKeyboard.m; sourceTree = "<group>"; };
 		E9A77B87178DCF27002BB058 /* libPlayN-IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPlayN-IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2316,6 +2325,12 @@
 				E9A7801C178DDAED002BB058 /* IOSPlatform.m */,
 				E9A7801D178DDAED002BB058 /* IOSPointer.h */,
 				E9A7801E178DDAED002BB058 /* IOSPointer.m */,
+				E907870E17948FAD00FFDA0C /* IOSSound.h */,
+				E907870F17948FAD00FFDA0C /* IOSSound.m */,
+				E907871117948FE400FFDA0C /* IOSTextLayout.h */,
+				E907871217948FE400FFDA0C /* IOSTextLayout.m */,
+				E90787081794830700FFDA0C /* IOSTouch.h */,
+				E90787091794830700FFDA0C /* IOSTouch.m */,
 				E9A7801F178DDAED002BB058 /* IOSViewController.h */,
 				E9A78020178DDAED002BB058 /* IOSViewController.m */,
 			);
@@ -3380,6 +3395,9 @@
 				E9C4C496178E129E00A6EBE5 /* Animation_ChainBuilder.m in Sources */,
 				E9C4C499178E154E00A6EBE5 /* SoundBoard_Sub.m in Sources */,
 				E96B4EE61790AD9200D899B3 /* IOSKeyboard.m in Sources */,
+				E907870A1794830700FFDA0C /* IOSTouch.m in Sources */,
+				E907871017948FAE00FFDA0C /* IOSSound.m in Sources */,
+				E907871317948FE400FFDA0C /* IOSTextLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
