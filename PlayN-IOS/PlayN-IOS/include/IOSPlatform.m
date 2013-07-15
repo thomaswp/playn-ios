@@ -13,6 +13,7 @@
 #import "IOSPointer.h"
 #import "IOSLog.h"
 #import "IOSKeyboard.h"
+#import "IOSTouch.h"
 #import "java/lang/Runnable.h"
 #import "java/lang/Math.h"
 #import "java/lang/System.h"
@@ -29,10 +30,11 @@
 #import "playn/core/Net.h"
 #import "playn/core/util/RunQueue.h"
 #import "playn/core/gl/GLContext.h"
+#import "playn/core/json/JsonImpl.h"
 
 @implementation IOSPlatform
 
-bool DISPLAY_FPS = NO;
+bool DISPLAY_FPS = YES;
 
 - (id) init {
     if (self = [super initWithPlaynCoreLog:nil]) {
@@ -50,7 +52,11 @@ bool DISPLAY_FPS = NO;
         graphics = [[IOSGraphics alloc] initWithPlatform:self withInt:screenWidth withInt:screenHeight withFloat:viewScale withFloat:deviceScale withBOOL:NO]; //TODO: support interpolation
         assets = [[IOSAssets alloc] initWithPlatform:self];
         pointer = [[IOSPointer alloc] initWithGraphics:graphics];
+        touch = [[IOSTouch alloc] initWithGraphics:graphics];
+        keyboard = [[IOSKeyboard alloc] init];
         log = [[IOSLog alloc] init];
+        json = [[PlaynCoreJsonJsonImpl alloc] init];
+        
         lastTick = [self timeLong];
         lastFPS = lastTick;
     }
@@ -83,6 +89,14 @@ bool DISPLAY_FPS = NO;
 
 - (id<PlaynCorePointer>) pointer {
     return pointer;
+}
+
+- (id<PlaynCoreTouch>) touch {
+    return touch;
+}
+
+-(id<PlaynCoreJson>) json {
+    return json;
 }
 
 - (id<PlaynCoreLog>) log {

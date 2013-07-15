@@ -10,4 +10,8 @@
 
 @implementation IOSFont
 
+- (NSString*) iosName {
+    return @"";
+}
+
 @end

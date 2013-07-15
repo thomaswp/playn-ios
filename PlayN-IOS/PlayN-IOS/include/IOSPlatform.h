@@ -14,6 +14,8 @@
 @class IOSPointer;
 @class IOSLog;
 @class IOSKeyboard;
+@class IOSTouch;
+@class PlaynCoreJsonJsonImpl;
 
 @interface IOSPlatform : PlaynCoreAbstractPlatform {
     long long lastTick;
@@ -24,6 +26,8 @@
     IOSPointer* pointer;
     IOSLog* log;
     IOSKeyboard* keyboard;
+    IOSTouch* touch;
+    PlaynCoreJsonJsonImpl* json;
     int frames;
     long long lastFPS;
 }

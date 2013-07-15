@@ -11,6 +11,7 @@
 #import "IOSAsyncImage.h"
 #import "IOSImage.h"
 #import "IOSGraphics.h"
+#import "IOSSound.h"
 #import "java/util/List.h"
 #import "java/util/Iterator.h"
 #import "java/io/File.h"
@@ -30,6 +31,20 @@ NSString* ASSETS_DIR = @"assets/";
         platform = platform__;
     }
     return self;
+}
+
+-(id<PlaynCoreSound>) getSoundWithNSString:(NSString *)path {
+    return [[IOSSound alloc] init];
+}
+
+-(NSString*) getTextSyncWithNSString:(NSString *)path {
+    path = [NSString stringWithFormat:@"%@%@", ASSETS_DIR, path];
+    path = [[NSBundle mainBundle] pathForResource:path ofType:@""];
+    NSString* content = [NSString stringWithContentsOfFile:path
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+    NSLog(@"%@", content);
+    return content;
 }
 
 - (id<PlaynCoreImage>) createStaticImageWithId:(id)iimpl withPlaynCoreGlScale:(PlaynCoreGlScale *)scale_ {

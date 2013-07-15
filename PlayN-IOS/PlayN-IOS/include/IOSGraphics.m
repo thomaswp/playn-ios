@@ -14,6 +14,8 @@
 #import "IOSGradient.h"
 #import "IOSIntArray.h"
 #import "IOSFloatArray.h"
+#import "IOSFont.h"
+#import "IOSTextLayout.h"
 #import "pythagoras/f/IPoint.h"
 #import "pythagoras/f/Point.h"
 #import "playn/core/ImageLayer.h"
@@ -54,9 +56,12 @@
     return [[IOSGradient_Radial alloc] initWithX:x withY:y withR:r withColors:colors withPositions:positions];
 }
 
-- (id<PlaynCoreTextLayout>) layoutTextWithNSString:(NSString *)param0 withPlaynCoreTextFormat:(PlaynCoreTextFormat *)param1 {
-    NSLog(@"layoutText()");
-    return nil;
+-(id<PlaynCoreFont>) createFontWithNSString:(NSString *)name withPlaynCoreFont_StyleEnum:(PlaynCoreFont_StyleEnum *)style withFloat:(float)size {
+    return [[IOSFont alloc] initWithNSString:name withPlaynCoreFont_StyleEnum:style withFloat:size];
+}
+
+- (id<PlaynCoreTextLayout>) layoutTextWithNSString:(NSString *)text withPlaynCoreTextFormat:(PlaynCoreTextFormat *)format {
+    return [[IOSTextLayout alloc] initWithGraphics:self withNSString:text withPlaynCoreTextFormat:format];
 }
 
 - (int) width {
