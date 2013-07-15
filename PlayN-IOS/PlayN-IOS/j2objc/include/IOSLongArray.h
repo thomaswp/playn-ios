@@ -19,6 +19,9 @@
 //  Created by Tom Ball on 6/16/11.
 //
 
+#ifndef _IOSLongArray_H_
+#define _IOSLongArray_H_
+
 #import "IOSArray.h"
 
 // An emulation class that represents a Java long array.  Like a Java array,
@@ -35,6 +38,7 @@
 // Return long at a specified index, throws IndexOutOfBoundsException
 // if out out range.
 - (long long)longAtIndex:(NSUInteger)index;
+- (long long *)longRefAtIndex:(NSUInteger)index;
 
 // Sets long at a specified index, throws IndexOutOfBoundsException
 // if out out range.  Returns replacement value.
@@ -61,3 +65,4 @@
 
 @end
 
+#endif // _IOSLongArray_H_

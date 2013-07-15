@@ -19,6 +19,9 @@
 //  Created by Tom Ball on 6/16/11.
 //
 
+#ifndef _IOSIntArray_H_
+#define _IOSIntArray_H_
+
 #import "IOSArray.h"
 
 // An emulation class that represents a Java int array.  Like a Java array,
@@ -35,6 +38,7 @@
 // Return int at a specified index, throws IndexOutOfBoundsException
 // if out out range;
 - (int)intAtIndex:(NSUInteger)index;
+- (int *)intRefAtIndex:(NSUInteger)index;
 
 // Sets int at a specified index, throws IndexOutOfBoundsException
 // if out out range. Returns replacement value.
@@ -60,3 +64,5 @@
 - (int)postDecr:(NSUInteger)index;
 
 @end
+
+#endif // _IOSIntArray_H_

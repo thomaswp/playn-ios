@@ -19,6 +19,9 @@
 //  Created by Tom Ball on 9/9/11.
 //
 
+#ifndef _IOSObjectArray_H_
+#define _IOSObjectArray_H_
+
 #import "IOSArray.h"
 
 @class IOSClass;
@@ -41,20 +44,20 @@
                  count:(NSUInteger)count
                   type:(IOSClass *)type;
 
-// Create an array from an element type, count and a C object array.
-+ (id)arrayWithType:(IOSClass *)type count:(int)count, ...;
-
 // Create an empty array with a type and length.
 - (id)initWithLength:(NSUInteger)length type:(IOSClass *)type;
 + (id)arrayWithLength:(NSUInteger)length type:(IOSClass *)type;
 
 // Create an empty multidimensional array.
 + (id)arrayWithDimensions:(NSUInteger)dimensionCount
-                  lengths:(NSUInteger *)dimensionLengths
+                  lengths:(const int *)dimensionLengths
                      type:(IOSClass *)type;
 
 + (id)arrayWithArray:(IOSObjectArray *)array;
 + (id)arrayWithNSArray:(NSArray *)array type:(IOSClass *)type;
+
++ (id)iosClassWithType:(IOSClass *)type;
++ (id)iosClassWithDimensions:(NSUInteger)dimensions type:(IOSClass *)type;
 
 // Return  at a specified index, throws IndexOutOfBoundsException
 // if out out range;
@@ -70,3 +73,5 @@
 - (void)getObjects:(NSObject **)buffer length:(NSUInteger)length;
 
 @end
+
+#endif // _IOSObjectArray_H_
