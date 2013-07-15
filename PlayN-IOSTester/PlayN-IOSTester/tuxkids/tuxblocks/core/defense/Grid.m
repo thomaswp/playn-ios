@@ -137,7 +137,8 @@
     self.state = gameState;
     self.rows_ = rows;
     self.cols_ = cols;
-//    passability_ = [IOSObjectArray arrayWithObjects:(id[]){ [[IOSBooleanArray alloc] initWithLength:cols] } count:rows type:[IOSClass classWithClass:[IOSBooleanArray class]]];
+      IOSBooleanArray* innerArray = [[IOSBooleanArray alloc] initWithLength:cols];
+    passability_ = [IOSObjectArray arrayWithObjects:(id[]){ innerArray } count:rows type:[IOSClass classWithClass:[IOSBooleanArray class]]];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
         [((IOSBooleanArray *) [((IOSObjectArray *) NIL_CHK(passability_)) objectAtIndex:i]) replaceBooleanAtIndex:j withBoolean:YES];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E96B4EE61790AD9200D899B3 /* IOSKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */; };
 		E9A77B8B178DCF27002BB058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A77B8A178DCF27002BB058 /* Foundation.framework */; };
 		E9A77DF1178DCF6F002BB058 /* AbstractAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77B9B178DCF6E002BB058 /* AbstractAssets.m */; };
 		E9A77DF2178DCF6F002BB058 /* AbstractFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77B9D178DCF6E002BB058 /* AbstractFont.m */; };
@@ -523,6 +524,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E96B4EE41790AD9200D899B3 /* IOSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSKeyboard.h; path = include/IOSKeyboard.h; sourceTree = "<group>"; };
+		E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSKeyboard.m; path = include/IOSKeyboard.m; sourceTree = "<group>"; };
 		E9A77B87178DCF27002BB058 /* libPlayN-IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPlayN-IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A77B8A178DCF27002BB058 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9A77B8E178DCF27002BB058 /* PlayN-IOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayN-IOS-Prefix.pch"; sourceTree = "<group>"; };
@@ -2301,6 +2304,8 @@
 				E9A78012178DDAED002BB058 /* IOSGraphics.m */,
 				E9A78013178DDAED002BB058 /* IOSImage.h */,
 				E9A78014178DDAED002BB058 /* IOSImage.m */,
+				E96B4EE41790AD9200D899B3 /* IOSKeyboard.h */,
+				E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */,
 				E9A78015178DDAED002BB058 /* IOSLog.h */,
 				E9A78016178DDAED002BB058 /* IOSLog.m */,
 				E9A78017178DDAED002BB058 /* IOSPath.h */,
@@ -3374,6 +3379,7 @@
 				E9C4C493178E0CE900A6EBE5 /* TypedStorage.m in Sources */,
 				E9C4C496178E129E00A6EBE5 /* Animation_ChainBuilder.m in Sources */,
 				E9C4C499178E154E00A6EBE5 /* SoundBoard_Sub.m in Sources */,
+				E96B4EE61790AD9200D899B3 /* IOSKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 @class IOSAssets;
 @class IOSPointer;
 @class IOSLog;
+@class IOSKeyboard;
 
 @interface IOSPlatform : PlaynCoreAbstractPlatform {
     long long lastTick;
@@ -22,6 +23,7 @@
     IOSAssets* assets;
     IOSPointer* pointer;
     IOSLog* log;
+    IOSKeyboard* keyboard;
     int frames;
     long long lastFPS;
 }

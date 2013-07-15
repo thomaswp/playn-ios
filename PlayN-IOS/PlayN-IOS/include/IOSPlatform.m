@@ -12,6 +12,7 @@
 #import "IOSAssets.h"
 #import "IOSPointer.h"
 #import "IOSLog.h"
+#import "IOSKeyboard.h"
 #import "java/lang/Runnable.h"
 #import "java/lang/Math.h"
 #import "java/lang/System.h"
@@ -73,15 +74,15 @@ bool DISPLAY_FPS = NO;
 }
 
 - (id<PlaynCoreGraphics>) graphics {
-    return (id<PlaynCoreGraphics>) graphics;
+    return graphics;
 }
 
 - (id<PlaynCoreAssets>) assets {
-    return (id<PlaynCoreAssets>) assets;
+    return assets;
 }
 
 - (id<PlaynCorePointer>) pointer {
-    return (id<PlaynCorePointer>) pointer;
+    return pointer;
 }
 
 - (id<PlaynCoreLog>) log {
@@ -90,6 +91,10 @@ bool DISPLAY_FPS = NO;
 
 - (id<PlaynCoreAudio>) audio {
     return nil;
+}
+
+- (id<PlaynCoreKeyboard>) keyboard {
+    return keyboard;
 }
 
 - (float) random {
