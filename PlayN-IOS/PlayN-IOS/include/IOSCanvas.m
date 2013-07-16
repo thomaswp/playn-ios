@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Thomas. All rights reserved.
 //
 
+#import <CoreText/CoreText.h>
 #import "IOSCanvas.h"
 #import "IOSCanvasState.h"
 #import "IOSGLContext.h"
@@ -13,6 +14,9 @@
 #import "IOSCanvasState.h"
 #import "IOSPath.h"
 #import "IOSPattern.h"
+#import "IOSGraphics.h"
+#import "IOSFont.h"
+#import "IOSTextLayout.h"
 #import "playn/core/gl/Scale.h"
 #import "playn/core/Path.h"
 
@@ -113,7 +117,13 @@ CGColorSpaceRef colorSpace;
 }
 
 - (id<PlaynCoreCanvas>) drawTextWithNSString:(NSString *)text withFloat:(float)x withFloat:(float)y {
-    NSLog(@"Canvas.drawText()");
+    CGContextSaveGState(bctx);
+    CGContextTranslateCTM(bctx, x, y + CTFontGetDescent([IOSGraphics defaultFont]->ctFont));
+    CGContextScaleCTM(bctx, 1, -1);
+    CGContextSelectFont(bctx, [[[IOSGraphics defaultFont] iosName] UTF8String], [IOSGraphics defaultFont].size, kCGEncodingMacRoman);
+    CGContextShowTextAtPoint(bctx, 0, 0, [text UTF8String], [text length]);
+    CGContextRestoreGState(bctx);
+    isDirty_ = YES;
     return self;
 }
 
@@ -171,7 +181,8 @@ CGColorSpaceRef colorSpace;
 }
 
 - (id<PlaynCoreCanvas>) fillTextWithPlaynCoreTextLayout:(id<PlaynCoreTextLayout>)layout withFloat:(float)x withFloat:(float)y {
-    NSLog(@"Canvas.fillText()");
+    [((IOSTextLayout*) layout) fillWithContext:bctx withX:x withY:y];
+    isDirty_ = YES;
     return self;
 }
 
@@ -209,7 +220,7 @@ CGColorSpaceRef colorSpace;
 
 - (id<PlaynCoreCanvas>) setFillColorWithInt:(int)color {
     [self currentState]->gradient = nil;
-    CGContextSetFillColorWithColor(bctx, [self toCGColor:color]);
+    CGContextSetFillColorWithColor(bctx, [IOSCanvas toCGColor:color]);
     return  self;
 }
 
@@ -279,7 +290,8 @@ CGColorSpaceRef colorSpace;
 }
 
 - (id<PlaynCoreCanvas>) strokeTextWithPlaynCoreTextLayout:(id<PlaynCoreTextLayout>)layout withFloat:(float)x withFloat:(float)y {
-    NSLog(@"Canvas.strokeText()");
+    [((IOSTextLayout*) layout) strokeWithContext:bctx withX:x withY:y withStrokeWidth:strokeWidth withStrokeColor:strokeColor];
+    isDirty_ = YES;
     return self;
 }
 
@@ -314,6 +326,10 @@ CGColorSpaceRef colorSpace;
 }
 
 - (CGColorRef) toCGColor:(int)color {
+    return [IOSCanvas toCGColor:color];
+}
+
++ (CGColorRef) toCGColor:(int)color {
     float blue = (color & 0xFF) / 255.0f;
     color >>= 8;
     float green = (color & 0xFF) / 255.0f;

@@ -22,6 +22,7 @@
 		E9078705179481EC00FFDA0C /* SpritesDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786F2179481EC00FFDA0C /* SpritesDemo.m */; };
 		E9078706179481EC00FFDA0C /* SwirlDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786F5179481EC00FFDA0C /* SwirlDemo.m */; };
 		E9078707179481EC00FFDA0C /* TextDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E90786F8179481EC00FFDA0C /* TextDemo.m */; };
+		E9A59EC71795BF11001CB603 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A59EC61795BF11001CB603 /* CoreText.framework */; };
 		E9C4C64E178E5A3000A6EBE5 /* CanvasParticleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C577178E5A3000A6EBE5 /* CanvasParticleRenderer.m */; };
 		E9C4C64F178E5A3000A6EBE5 /* GLStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C579178E5A3000A6EBE5 /* GLStatus.m */; };
 		E9C4C650178E5A3000A6EBE5 /* Angle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C57C178E5A3000A6EBE5 /* Angle.m */; };
@@ -191,6 +192,7 @@
 		E90786F5179481EC00FFDA0C /* SwirlDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwirlDemo.m; sourceTree = "<group>"; };
 		E90786F7179481EC00FFDA0C /* TextDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextDemo.h; sourceTree = "<group>"; };
 		E90786F8179481EC00FFDA0C /* TextDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextDemo.m; sourceTree = "<group>"; };
+		E9A59EC61795BF11001CB603 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E9C4C576178E5A3000A6EBE5 /* CanvasParticleRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasParticleRenderer.h; sourceTree = "<group>"; };
 		E9C4C577178E5A3000A6EBE5 /* CanvasParticleRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasParticleRenderer.m; sourceTree = "<group>"; };
 		E9C4C578178E5A3000A6EBE5 /* GLStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLStatus.h; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A59EC71795BF11001CB603 /* CoreText.framework in Frameworks */,
 				E9D0D3BE178DE9E10099C6DF /* libPlayN-IOS.a in Frameworks */,
 				E9D0D37D178DE94C0099C6DF /* UIKit.framework in Frameworks */,
 				E9D0D37F178DE94C0099C6DF /* Foundation.framework in Frameworks */,
@@ -894,6 +897,7 @@
 		E9D0D370178DE94C0099C6DF = {
 			isa = PBXGroup;
 			children = (
+				E9A59EC61795BF11001CB603 /* CoreText.framework */,
 				E9D0D3B6178DE9CB0099C6DF /* PlayN-IOS.xcodeproj */,
 				E9D0D386178DE94C0099C6DF /* PlayN-IOSTester */,
 				E9D0D37B178DE94C0099C6DF /* Frameworks */,

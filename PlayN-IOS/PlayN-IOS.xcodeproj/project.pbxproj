@@ -11,6 +11,7 @@
 		E907871017948FAE00FFDA0C /* IOSSound.m in Sources */ = {isa = PBXBuildFile; fileRef = E907870F17948FAD00FFDA0C /* IOSSound.m */; };
 		E907871317948FE400FFDA0C /* IOSTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E907871217948FE400FFDA0C /* IOSTextLayout.m */; };
 		E96B4EE61790AD9200D899B3 /* IOSKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */; };
+		E9A59EC517959126001CB603 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A59EC417959125001CB603 /* CoreText.framework */; };
 		E9A77B8B178DCF27002BB058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A77B8A178DCF27002BB058 /* Foundation.framework */; };
 		E9A77DF1178DCF6F002BB058 /* AbstractAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77B9B178DCF6E002BB058 /* AbstractAssets.m */; };
 		E9A77DF2178DCF6F002BB058 /* AbstractFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77B9D178DCF6E002BB058 /* AbstractFont.m */; };
@@ -535,6 +536,7 @@
 		E907871217948FE400FFDA0C /* IOSTextLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSTextLayout.m; path = include/IOSTextLayout.m; sourceTree = "<group>"; };
 		E96B4EE41790AD9200D899B3 /* IOSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSKeyboard.h; path = include/IOSKeyboard.h; sourceTree = "<group>"; };
 		E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSKeyboard.m; path = include/IOSKeyboard.m; sourceTree = "<group>"; };
+		E9A59EC417959125001CB603 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E9A77B87178DCF27002BB058 /* libPlayN-IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPlayN-IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A77B8A178DCF27002BB058 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E9A77B8E178DCF27002BB058 /* PlayN-IOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlayN-IOS-Prefix.pch"; sourceTree = "<group>"; };
@@ -1540,6 +1542,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A59EC517959126001CB603 /* CoreText.framework in Frameworks */,
 				E9A77F6D178DD328002BB058 /* GLKit.framework in Frameworks */,
 				E9A77F6B178DD31D002BB058 /* CoreGraphics.framework in Frameworks */,
 				E9A77F6C178DD31D002BB058 /* OpenGLES.framework in Frameworks */,
@@ -1556,6 +1559,7 @@
 		E9A77B7E178DCF27002BB058 = {
 			isa = PBXGroup;
 			children = (
+				E9A59EC417959125001CB603 /* CoreText.framework */,
 				E9A77F63178DD1F5002BB058 /* CoreGraphics.framework */,
 				E9A77F64178DD1F5002BB058 /* OpenGLES.framework */,
 				E9A77F65178DD1F5002BB058 /* QuartzCore.framework */,

@@ -30,6 +30,8 @@
     NSMutableArray* states;
 }
 
++ (CGColorRef) toCGColor:(int)color;
+
 - (id) initWithContext:(IOSGLContext*)context withWidth:(float)width withHeight:(float)height withInterpolate:(BOOL)interpolate;
 - (char*) data;
 - (int) texWidth;

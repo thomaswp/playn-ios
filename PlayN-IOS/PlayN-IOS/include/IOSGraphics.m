@@ -30,6 +30,16 @@
 
 @implementation IOSGraphics
 
+IOSFont* defaultFont;
+
++ (void) initialize {
+    defaultFont = [[IOSFont alloc] initWithNSString:@"Helvetica" withPlaynCoreFont_StyleEnum:[PlaynCoreFont_StyleEnum PLAIN] withFloat:12];
+}
+
++ (IOSFont*) defaultFont {
+    return defaultFont;
+}
+
 - (id) initWithPlatform:(IOSPlatform *)platform withInt:(int)screenWidth_ withInt:(int)screenHeight_ withFloat:(float)viewScale_ withFloat:(float)touchScale_ withBOOL:(BOOL)interpolateCanvasDrawing_ {
     if (self = [super init]) {
         screenWidth = screenWidth_;
@@ -39,8 +49,17 @@
         ctx = [[IOSGLContext alloc] initWithPlaynCorePlatform: (id<PlaynCorePlatform>) platform withFloat:viewScale_ withInt:screenWidth_ withInt:screenHeight_];
         rootLayer = [[PlaynCoreGlGroupLayerGL alloc] initWithPlaynCoreGlGLContext:ctx];
         touchTemp = [[PythagorasFPoint alloc] init];
+        [self createScratchContext];
     }
     return self;
+}
+
+- (void) createScratchContext {
+    int size = 10;
+    char* data = (char*) malloc(sizeof(char) * size * size * 4);
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    scratchCtx = CGBitmapContextCreate(data, size, size, 8, 4 * size, colorSpace, kCGImageAlphaPremultipliedLast);
+    CGColorSpaceRelease(colorSpace);
 }
 
 - (id<PlaynCoreCanvasImage>) createImageWithFloat:(float)width withFloat:(float)height {

@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreText/CoreText.h>
 #import "playn/core/AbstractFont.h"
 
 @interface IOSFont : PlaynCoreAbstractFont {
-    
+    @public CTFontRef ctFont;
 }
+
++ (void) registerVariantWithName:(NSString*)name withStyle:(PlaynCoreFont_StyleEnum*)style withVariantName:(NSString*)variantName;
++ (IOSFont*) defaultFont;
 
 - (NSString*) iosName;
 

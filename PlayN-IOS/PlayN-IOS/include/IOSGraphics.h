@@ -13,6 +13,7 @@
 @class IOSGLContext;
 @class IOSPlatform;
 @class PythagorasFPoint;
+@class IOSFont;
 @protocol PythagorasFIPoint;
 
 @interface IOSGraphics : PlaynCoreGlGraphicsGL {
@@ -23,10 +24,12 @@
     BOOL invertSizes;
     BOOL interpolateCanvasDrawing;
     PythagorasFPoint* touchTemp;
+    @public CGContextRef scratchCtx;
 }
 
-- (id) initWithPlatform:(IOSPlatform*)platform withInt:(int)screenWidth withInt:(int)screenHeight withFloat:(float)viewScale withFloat:(float)touchScale withBOOL:(BOOL)interpolateCanvasDrawing;
++ (IOSFont*) defaultFont;
 
+- (id) initWithPlatform:(IOSPlatform*)platform withInt:(int)screenWidth withInt:(int)screenHeight withFloat:(float)viewScale withFloat:(float)touchScale withBOOL:(BOOL)interpolateCanvasDrawing;
 - (void) paint;
 - (IOSGLContext*) ctx;
 - (id<PythagorasFIPoint>) transformTouchWithX:(float)x withY:(int)y;
