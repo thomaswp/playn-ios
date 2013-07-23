@@ -112,6 +112,10 @@ IOSFont* defaultFont;
     return ctx;
 }
 
+- (void) setOrientation:(UIDeviceOrientation)orientation {
+    invertSizes = [ctx setOrientation:orientation];
+}
+
 - (id<PythagorasFIPoint>) transformTouchWithX:(float)x withY:(int)y {
     [touchTemp setWithFloat:x * touchScale withFloat:y * touchScale];
     return [[ctx rootTransform] inverseTransformWithPythagorasFIPoint:touchTemp withPythagorasFPoint:touchTemp];

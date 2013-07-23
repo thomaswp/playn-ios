@@ -54,9 +54,9 @@ NSMutableDictionary* _variants;
 + (void) registerVariantWithName:(NSString *)name withStyle:(PlaynCoreFont_StyleEnum *)style withVariantName:(NSString *)variantName {
     NSMutableDictionary* styleVariants = [_variants objectForKey:style];
     if (styleVariants == nil) {
-        [_variants setObject:style forKey:styleVariants = [[NSMutableDictionary alloc] init]];
+        [_variants setObject:styleVariants = [[NSMutableDictionary alloc] init] forKey:style];
     }
-    [styleVariants setObject:name forKey:variantName];
+    [styleVariants setObject:variantName forKey:name];
 }
 
 + (IOSFont*) defaultFont {

@@ -17,24 +17,44 @@
 @class IOSTouch;
 @class PlaynCoreJsonJsonImpl;
 
-@interface IOSPlatform : PlaynCoreAbstractPlatform {
-    long long lastTick;
-    int elapsedTime;
-    id<PlaynCoreGame> game;
-    IOSGraphics* graphics;
-    IOSAssets* assets;
-    IOSPointer* pointer;
-    IOSLog* log;
-    IOSKeyboard* keyboard;
-    IOSTouch* touch;
-    PlaynCoreJsonJsonImpl* json;
-    int frames;
-    long long lastFPS;
+@interface SupportedOrients : NSObject
+
++ (SupportedOrients*) LANDSCAPES;
++ (SupportedOrients*) PORTRAITS;
++ (SupportedOrients*) ALL;
+- (id) initWithDefaultOrientation:(UIDeviceOrientation) defaultOrientation;
+- (BOOL) isSupportedWithOrientation:(UIDeviceOrientation) orient;
+
+@end
+
+@interface SupportedOrients_Portraits : SupportedOrients
+@end
+
+@interface SupportedOrients_Landscapes : SupportedOrients
+@end
+
+@interface SupportedOrients_All : SupportedOrients
+@end
+
+@interface IOSPlatform_Config : NSObject {
+    @public
+    SupportedOrients* orients;
+    BOOL iPadLikePhone;
+    int frameInterval;
+    BOOL interpolateCanvasDrawing;
 }
 
+@end
+
+@interface IOSPlatform : PlaynCoreAbstractPlatform {
+}
+
++ (IOSPlatform*) registerPlatformWithApp:(UIApplication*)app;
++ (IOSPlatform*) registerPlatformWithApp:(UIApplication*)app withConfig:(IOSPlatform_Config*)config;
 - (void) update;
 - (void) paint;
-- (void) registerPlatform;
 - (void) viewDidInitWithInt:(int)defaultFrameBuffer;
+- (int) preferredFPS;
+- (void) onOrientationChangeWithOrient:(UIDeviceOrientation)orient;
 
 @end

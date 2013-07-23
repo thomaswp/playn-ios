@@ -21,7 +21,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PlayN-IOSTester/ViewController.m"
-         timestampString = "395608770.640278"
+         timestampString = "396286104.125746"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "23"
@@ -164,7 +164,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PlayN-IOSTester/ViewController.m"
-         timestampString = "395610415.808876"
+         timestampString = "396286104.125746"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "25"
@@ -222,6 +222,32 @@
          startingLineNumber = "38"
          endingLineNumber = "38"
          landmarkName = "-tickWithInt:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSFont.m"
+         timestampString = "396283001.272236"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
+         landmarkName = "+getVariantWithName:withStyle:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSFont.m"
+         timestampString = "396283142.088055"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "95"
+         endingLineNumber = "95"
+         landmarkName = "+initialize"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

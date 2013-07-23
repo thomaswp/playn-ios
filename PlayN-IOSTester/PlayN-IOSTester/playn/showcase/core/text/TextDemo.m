@@ -44,7 +44,7 @@
   float MARGIN = 10;
   float xpos = MARGIN, maxYPos = 0;
   {
-    IOSObjectArray *a__ = [IOSObjectArray arrayWithObjects:(id[]){ @"Helvetica", @"Museo-300" } count:2 type:[IOSClass classWithClass:[NSString class]]];
+    IOSObjectArray *a__ = [IOSObjectArray arrayWithObjects:(id[]){ @"Helvetica", @"Georgia" } count:2 type:[IOSClass classWithClass:[NSString class]]];
     int n__ = (int) [((IOSObjectArray *) NIL_CHK(a__)) count];
     for (int i__ = 0; i__ < n__; i__++) {
       NSString *name = ((NSObject *) [((IOSObjectArray *) NIL_CHK(a__)) objectAtIndex:i__]);

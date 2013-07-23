@@ -142,7 +142,6 @@
 		E9A77E73178DCF6F002BB058 /* AbstractVector.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77CA5178DCF6F002BB058 /* AbstractVector.m */; };
 		E9A77E74178DCF6F002BB058 /* AffineTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77CA7178DCF6F002BB058 /* AffineTransform.m */; };
 		E9A77E75178DCF6F002BB058 /* Arc.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77CA9178DCF6F002BB058 /* Arc.m */; };
-		E9A77E76178DCF6F002BB058 /* Area.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77CAB178DCF6F002BB058 /* Area.m */; };
 		E9A77E77178DCF6F002BB058 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77CAD178DCF6F002BB058 /* Box.m */; };
 		E9A77E78178DCF6F002BB058 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77CAF178DCF6F002BB058 /* Circle.m */; };
 		E9A77E79178DCF6F002BB058 /* Crossing.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77CB1178DCF6F002BB058 /* Crossing.m */; };
@@ -221,7 +220,6 @@
 		E9A77EC2178DCF6F002BB058 /* AbstractVector.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77D44178DCF6F002BB058 /* AbstractVector.m */; };
 		E9A77EC3178DCF6F002BB058 /* AffineTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77D46178DCF6F002BB058 /* AffineTransform.m */; };
 		E9A77EC4178DCF6F002BB058 /* Arc.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77D48178DCF6F002BB058 /* Arc.m */; };
-		E9A77EC5178DCF6F002BB058 /* Area.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77D4A178DCF6F002BB058 /* Area.m */; };
 		E9A77EC6178DCF6F002BB058 /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77D4C178DCF6F002BB058 /* Box.m */; };
 		E9A77EC7178DCF6F002BB058 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77D4E178DCF6F002BB058 /* Circle.m */; };
 		E9A77EC8178DCF6F002BB058 /* Crossing.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77D50178DCF6F002BB058 /* Crossing.m */; };
@@ -798,8 +796,6 @@
 		E9A77CA7178DCF6F002BB058 /* AffineTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AffineTransform.m; sourceTree = "<group>"; };
 		E9A77CA8178DCF6F002BB058 /* Arc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arc.h; sourceTree = "<group>"; };
 		E9A77CA9178DCF6F002BB058 /* Arc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arc.m; sourceTree = "<group>"; };
-		E9A77CAA178DCF6F002BB058 /* Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Area.h; sourceTree = "<group>"; };
-		E9A77CAB178DCF6F002BB058 /* Area.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Area.m; sourceTree = "<group>"; };
 		E9A77CAC178DCF6F002BB058 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		E9A77CAD178DCF6F002BB058 /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		E9A77CAE178DCF6F002BB058 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
@@ -956,8 +952,6 @@
 		E9A77D46178DCF6F002BB058 /* AffineTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AffineTransform.m; sourceTree = "<group>"; };
 		E9A77D47178DCF6F002BB058 /* Arc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arc.h; sourceTree = "<group>"; };
 		E9A77D48178DCF6F002BB058 /* Arc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arc.m; sourceTree = "<group>"; };
-		E9A77D49178DCF6F002BB058 /* Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Area.h; sourceTree = "<group>"; };
-		E9A77D4A178DCF6F002BB058 /* Area.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Area.m; sourceTree = "<group>"; };
 		E9A77D4B178DCF6F002BB058 /* Box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
 		E9A77D4C178DCF6F002BB058 /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
 		E9A77D4D178DCF6F002BB058 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
@@ -1938,8 +1932,6 @@
 				E9A77CA7178DCF6F002BB058 /* AffineTransform.m */,
 				E9A77CA8178DCF6F002BB058 /* Arc.h */,
 				E9A77CA9178DCF6F002BB058 /* Arc.m */,
-				E9A77CAA178DCF6F002BB058 /* Area.h */,
-				E9A77CAB178DCF6F002BB058 /* Area.m */,
 				E9A77CAC178DCF6F002BB058 /* Box.h */,
 				E9A77CAD178DCF6F002BB058 /* Box.m */,
 				E9A77CAE178DCF6F002BB058 /* Circle.h */,
@@ -2103,8 +2095,6 @@
 				E9A77D46178DCF6F002BB058 /* AffineTransform.m */,
 				E9A77D47178DCF6F002BB058 /* Arc.h */,
 				E9A77D48178DCF6F002BB058 /* Arc.m */,
-				E9A77D49178DCF6F002BB058 /* Area.h */,
-				E9A77D4A178DCF6F002BB058 /* Area.m */,
 				E9A77D4B178DCF6F002BB058 /* Box.h */,
 				E9A77D4C178DCF6F002BB058 /* Box.m */,
 				E9A77D4D178DCF6F002BB058 /* Circle.h */,
@@ -3033,7 +3023,6 @@
 				E9A77E73178DCF6F002BB058 /* AbstractVector.m in Sources */,
 				E9A77E74178DCF6F002BB058 /* AffineTransform.m in Sources */,
 				E9A77E75178DCF6F002BB058 /* Arc.m in Sources */,
-				E9A77E76178DCF6F002BB058 /* Area.m in Sources */,
 				E9A77E77178DCF6F002BB058 /* Box.m in Sources */,
 				E9A77E78178DCF6F002BB058 /* Circle.m in Sources */,
 				E9A77E79178DCF6F002BB058 /* Crossing.m in Sources */,
@@ -3112,7 +3101,6 @@
 				E9A77EC2178DCF6F002BB058 /* AbstractVector.m in Sources */,
 				E9A77EC3178DCF6F002BB058 /* AffineTransform.m in Sources */,
 				E9A77EC4178DCF6F002BB058 /* Arc.m in Sources */,
-				E9A77EC5178DCF6F002BB058 /* Area.m in Sources */,
 				E9A77EC6178DCF6F002BB058 /* Box.m in Sources */,
 				E9A77EC7178DCF6F002BB058 /* Circle.m in Sources */,
 				E9A77EC8178DCF6F002BB058 /* Crossing.m in Sources */,

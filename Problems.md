@@ -3,7 +3,7 @@
 *The following are problems identified using j2objc to transpile the PlayN libraries:*
 
 **Pythagoras:**
-* Area.m in both f/ and d/ makes Xcode hang when archiving: simply avoided archiving
+* Area.m in both f/ and d/ makes Xcode hang when archiving/profiling; seems like and Xcode bug: removed files
 * Crossing.m in both f/ and d/ has ax and Ax with duplicate setters: commented out
 
 **PlayN:**

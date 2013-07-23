@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-//#import "playn/sample/hello/core/HelloGame.h"
-//#import "playn/sample/cute/core/CuteGame.h"
+#import "playn/core/PlayN.h"
+#import "playn/sample/hello/core/HelloGame.h"
+#import "playn/sample/cute/core/CuteGame.h"
 #import "playn/showcase/core/Showcase.h"
 //#import "tuxkids/tuxblocks/core/TuxBlocksGame.h"
-#import "playn/core/PlayN.h"
 
 
 @implementation ViewController
@@ -21,8 +21,8 @@
     [super viewDidLoad];
 //    PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
 //    TuxkidsTuxblocksCoreTuxBlocksGame* game = [[TuxkidsTuxblocksCoreTuxBlocksGame alloc] init];
-//    PlaynSampleCuteCoreCuteGame* game = [[PlaynSampleCuteCoreCuteGame alloc] init];
-    PlaynShowcaseCoreShowcase* game = [[PlaynShowcaseCoreShowcase alloc] initWithPlaynShowcaseCoreShowcase_DeviceService:nil];
+    PlaynSampleCuteCoreCuteGame* game = [[PlaynSampleCuteCoreCuteGame alloc] init];
+//    PlaynShowcaseCoreShowcase* game = [[PlaynShowcaseCoreShowcase alloc] initWithPlaynShowcaseCoreShowcase_DeviceService:nil];
     [PlaynCorePlayN runWithPlaynCoreGame:game];
 }
 

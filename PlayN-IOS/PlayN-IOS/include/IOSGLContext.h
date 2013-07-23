@@ -27,5 +27,6 @@
 - (void) paintWithGroupLayer:(PlaynCoreGlGroupLayerGL*)rootLayer;
 - (void) updateTextureWithInt:(int)tex withCGImage:(CGImageRef) image;
 - (void) updateTextureWithInt:(int)tex withInt:(int)width withInt:(int)height withData:(char*)data;
+- (BOOL) setOrientation:(UIDeviceOrientation)orientation;
 
 @end

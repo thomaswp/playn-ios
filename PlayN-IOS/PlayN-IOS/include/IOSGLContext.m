@@ -53,7 +53,7 @@ BOOL checkErrors = YES;
     [self checkGLErrorWithNSString:@"error"];
 }
 
-- (BOOL) setOrientationWithUIDeviceOrientation:(UIDeviceOrientation) orientation {
+- (BOOL) setOrientation:(UIDeviceOrientation) orientation {
     orient = orientation;
     [rootTransform setTransformWithFloat:scale__.factor withFloat:0 withFloat:0 withFloat:scale__.factor withFloat:0 withFloat:0];
     switch (orientation) {
