@@ -22,6 +22,13 @@
 
 @implementation IOSViewController
 
+- (id) initWithPlatform:(IOSPlatform *)platform_ {
+    if (self = [super init]) {
+        platform = platform_;
+    }
+    return self;
+}
+
 - (BOOL) shouldAutorotate {
     return NO;
 }
@@ -43,6 +50,12 @@
 {
     [super viewDidLoad];
     
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter]
+             addObserver:self selector:@selector(orientationChanged:)
+             name:UIDeviceOrientationDidChangeNotification
+             object:[UIDevice currentDevice]];
+    
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 
     if (!self.context) {
@@ -56,13 +69,14 @@
     [self setupGL];
 }
 
+- (void) orientationChanged:(NSNotification *)note {
+    [platform onOrientationChangeWithOrient:[[UIDevice currentDevice] orientation]];
+}
 
 - (void)setupGL
 {
     [EAGLContext setCurrentContext:self.context];
     
-    platform = [[IOSPlatform alloc] init];
-    [platform registerPlatform];
     [platform viewDidInitWithInt:0];
     self.preferredFramesPerSecond = [platform preferredFPS];
     

@@ -14,6 +14,7 @@
 #import "IOSLog.h"
 #import "IOSKeyboard.h"
 #import "IOSTouch.h"
+#import "IOSViewController.h"
 #import "java/lang/Runnable.h"
 #import "java/lang/Math.h"
 #import "java/lang/System.h"
@@ -40,9 +41,9 @@
 SupportedOrients *LANDSCAPES, *PORTRAITS, *ALL;
 
 + (void)initialize {
-    PORTRAITS = [[SupportedOrients_Landscapes alloc] initWithDefaultOrientation:UIDeviceOrientationPortrait];
+    PORTRAITS = [[SupportedOrients_Portraits alloc] initWithDefaultOrientation:UIDeviceOrientationPortrait];
     LANDSCAPES = [[SupportedOrients_Landscapes alloc] initWithDefaultOrientation:UIDeviceOrientationLandscapeRight];
-    ALL = [[SupportedOrients_Landscapes alloc] initWithDefaultOrientation:UIDeviceOrientationPortrait];
+    ALL = [[SupportedOrients_All alloc] initWithDefaultOrientation:UIDeviceOrientationPortrait];
 }
 
 + (SupportedOrients *)PORTRAITS {
@@ -139,6 +140,7 @@ SupportedOrients *LANDSCAPES, *PORTRAITS, *ALL;
     int frameInterval;
     UIApplication* app;
     UIWindow* mainWindow;
+    IOSViewController* rootViewController;
 }
 
 const bool DISPLAY_FPS = YES;
@@ -177,6 +179,10 @@ const bool DISPLAY_FPS = YES;
         keyboard = [[IOSKeyboard alloc] init];
         json = [[PlaynCoreJsonJsonImpl alloc] init];
         
+        mainWindow = [[UIWindow alloc] initWithFrame:bounds];
+        rootViewController = [[IOSViewController alloc] initWithPlatform:self];
+        mainWindow.rootViewController = rootViewController;
+        
         lastTick = [self timeLong];
         lastFPS = lastTick;
         
@@ -186,7 +192,7 @@ const bool DISPLAY_FPS = YES;
 }
 
 - (int) preferredFPS {
-    return frameInterval;
+    return 60 / frameInterval;
 }
 
 - (void) invokeAsyncWithJavaLangRunnable:(id<JavaLangRunnable>)action {
@@ -280,6 +286,7 @@ const bool DISPLAY_FPS = YES;
 - (void) runWithPlaynCoreGame:(id<PlaynCoreGame>)game_ {
     game = game_;
     [game init__];
+    [mainWindow makeKeyAndVisible];
 }
 
 - (void) viewDidInitWithInt:(int)defaultFrameBuffer {

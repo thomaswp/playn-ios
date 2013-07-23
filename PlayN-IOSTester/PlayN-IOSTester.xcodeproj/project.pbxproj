@@ -133,11 +133,6 @@
 		E9D0D393178DE94C0099C6DF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D0D392178DE94C0099C6DF /* Default.png */; };
 		E9D0D395178DE94C0099C6DF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D0D394178DE94C0099C6DF /* Default@2x.png */; };
 		E9D0D397178DE94C0099C6DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D0D396178DE94C0099C6DF /* Default-568h@2x.png */; };
-		E9D0D39A178DE94C0099C6DF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D0D398178DE94C0099C6DF /* MainStoryboard_iPhone.storyboard */; };
-		E9D0D39D178DE94C0099C6DF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9D0D39B178DE94C0099C6DF /* MainStoryboard_iPad.storyboard */; };
-		E9D0D39F178DE94C0099C6DF /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = E9D0D39E178DE94C0099C6DF /* Shader.fsh */; };
-		E9D0D3A1178DE94C0099C6DF /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = E9D0D3A0178DE94C0099C6DF /* Shader.vsh */; };
-		E9D0D3A4178DE94D0099C6DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D0D3A3178DE94D0099C6DF /* ViewController.m */; };
 		E9D0D3B4178DE99A0099C6DF /* HelloGame.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D0D3B1178DE99A0099C6DF /* HelloGame.m */; };
 		E9D0D3B5178DE99A0099C6DF /* Pea.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D0D3B3178DE99A0099C6DF /* Pea.m */; };
 		E9D0D3BE178DE9E10099C6DF /* libPlayN-IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D0D3BB178DE9CB0099C6DF /* libPlayN-IOS.a */; };
@@ -406,12 +401,6 @@
 		E9D0D392178DE94C0099C6DF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E9D0D394178DE94C0099C6DF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E9D0D396178DE94C0099C6DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E9D0D399178DE94C0099C6DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		E9D0D39C178DE94C0099C6DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E9D0D39E178DE94C0099C6DF /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		E9D0D3A0178DE94C0099C6DF /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
-		E9D0D3A2178DE94C0099C6DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E9D0D3A3178DE94D0099C6DF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E9D0D3B0178DE99A0099C6DF /* HelloGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloGame.h; sourceTree = "<group>"; };
 		E9D0D3B1178DE99A0099C6DF /* HelloGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloGame.m; sourceTree = "<group>"; };
 		E9D0D3B2178DE99A0099C6DF /* Pea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pea.h; sourceTree = "<group>"; };
@@ -934,12 +923,6 @@
 				E9D0D3AC178DE99A0099C6DF /* playn */,
 				E9D0D38F178DE94C0099C6DF /* AppDelegate.h */,
 				E9D0D390178DE94C0099C6DF /* AppDelegate.m */,
-				E9D0D398178DE94C0099C6DF /* MainStoryboard_iPhone.storyboard */,
-				E9D0D39B178DE94C0099C6DF /* MainStoryboard_iPad.storyboard */,
-				E9D0D39E178DE94C0099C6DF /* Shader.fsh */,
-				E9D0D3A0178DE94C0099C6DF /* Shader.vsh */,
-				E9D0D3A2178DE94C0099C6DF /* ViewController.h */,
-				E9D0D3A3178DE94D0099C6DF /* ViewController.m */,
 				E9D0D387178DE94C0099C6DF /* Supporting Files */,
 			);
 			path = "PlayN-IOSTester";
@@ -1076,10 +1059,6 @@
 				E9D0D393178DE94C0099C6DF /* Default.png in Resources */,
 				E9D0D395178DE94C0099C6DF /* Default@2x.png in Resources */,
 				E9D0D397178DE94C0099C6DF /* Default-568h@2x.png in Resources */,
-				E9D0D39A178DE94C0099C6DF /* MainStoryboard_iPhone.storyboard in Resources */,
-				E9D0D39D178DE94C0099C6DF /* MainStoryboard_iPad.storyboard in Resources */,
-				E9D0D39F178DE94C0099C6DF /* Shader.fsh in Resources */,
-				E9D0D3A1178DE94C0099C6DF /* Shader.vsh in Resources */,
 				E9D0D3C6178DEC780099C6DF /* assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1093,7 +1072,6 @@
 			files = (
 				E9D0D38D178DE94C0099C6DF /* main.m in Sources */,
 				E9D0D391178DE94C0099C6DF /* AppDelegate.m in Sources */,
-				E9D0D3A4178DE94D0099C6DF /* ViewController.m in Sources */,
 				E9D0D3B4178DE99A0099C6DF /* HelloGame.m in Sources */,
 				E9D0D3B5178DE99A0099C6DF /* Pea.m in Sources */,
 				E9C4C64E178E5A3000A6EBE5 /* CanvasParticleRenderer.m in Sources */,
@@ -1230,22 +1208,6 @@
 				E9D0D38A178DE94C0099C6DF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E9D0D398178DE94C0099C6DF /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9D0D399178DE94C0099C6DF /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		E9D0D39B178DE94C0099C6DF /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9D0D39C178DE94C0099C6DF /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

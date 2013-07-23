@@ -10,22 +10,10 @@
 #import <GLKit/GLKit.h>
 @class IOSPlatform;
 
-typedef struct {
-    CGPoint geometryVertex;
-    CGPoint textureVertex;
-} TexturedVertex;
-
-typedef struct {
-    TexturedVertex bl;
-    TexturedVertex br;
-    TexturedVertex tl;
-    TexturedVertex tr;
-} TexturedQuad;
-
 @interface IOSViewController : GLKViewController {
     IOSPlatform* platform;
-    GLKTextureInfo* info;
-    TexturedQuad quad;
 }
+
+- (id) initWithPlatform:(IOSPlatform*) platform;
 
 @end

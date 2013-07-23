@@ -20,19 +20,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "PlayN-IOSTester/ViewController.m"
-         timestampString = "396286104.125746"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "23"
-         endingLineNumber = "23"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "PlayN-IOSTester/tuxkids/tuxblocks/core/TuxBlocksGame.m"
          timestampString = "395205703.91504"
          startingColumnNumber = "9223372036854775807"
@@ -138,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../PlayN-IOS/PlayN-IOS/include/IOSPlatform.m"
-         timestampString = "395613138.202603"
+         timestampString = "396293396.609994"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "137"
-         endingLineNumber = "137"
+         startingLineNumber = "336"
+         endingLineNumber = "336"
          landmarkName = "-update"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,25 +138,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../PlayN-IOS/PlayN-IOS/include/IOSPlatform.m"
-         timestampString = "395613138.202603"
+         timestampString = "396293396.609994"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
+         startingLineNumber = "338"
+         endingLineNumber = "338"
          landmarkName = "-update"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "PlayN-IOSTester/ViewController.m"
-         timestampString = "396286104.125746"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "25"
-         endingLineNumber = "25"
-         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -248,6 +222,45 @@
          startingLineNumber = "95"
          endingLineNumber = "95"
          landmarkName = "+initialize"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSPlatform.m"
+         timestampString = "396293207.733024"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "182"
+         endingLineNumber = "182"
+         landmarkName = "-initWithApp:withConfig:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSViewController.m"
+         timestampString = "396294343.054439"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-orientationChanged"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSPlatform.m"
+         timestampString = "396294572.935983"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "297"
+         endingLineNumber = "297"
+         landmarkName = "-onOrientationChangeWithOrient:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

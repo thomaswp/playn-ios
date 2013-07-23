@@ -7,13 +7,28 @@
 //
 
 #import "AppDelegate.h"
+#import "IOSPlatform.h"
+#import "playn/core/PlayN.h"
+
+#import "playn/sample/hello/core/HelloGame.h"
+#import "playn/sample/cute/core/CuteGame.h"
+#import "playn/showcase/core/Showcase.h"
+//#import "tuxkids/tuxblocks/core/TuxBlocksGame.h"
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    IOSPlatform_Config* config = [[IOSPlatform_Config alloc] init];
+    config->frameInterval = 2;
+    config->orients = [SupportedOrients ALL];
+    [IOSPlatform registerPlatformWithApp:application withConfig:config];
+    
+//    PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
+//    PlaynSampleCuteCoreCuteGame* game = [[PlaynSampleCuteCoreCuteGame alloc] init];
+    PlaynShowcaseCoreShowcase* game = [[PlaynShowcaseCoreShowcase alloc] initWithPlaynShowcaseCoreShowcase_DeviceService:nil];
+//    TuxkidsTuxblocksCoreTuxBlocksGame* game = [[TuxkidsTuxblocksCoreTuxBlocksGame alloc] init];
+    
+    [PlaynCorePlayN runWithPlaynCoreGame:game];
     return YES;
 }
 							
