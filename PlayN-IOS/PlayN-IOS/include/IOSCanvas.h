@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "playn/core/gl/AbstractCanvasGL.h"
+#include "playn/core/gl/AbstractCanvasGL.h"
 
 @class IOSGLContext;
 

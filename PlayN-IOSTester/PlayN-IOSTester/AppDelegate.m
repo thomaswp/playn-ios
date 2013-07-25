@@ -13,7 +13,7 @@
 #import "playn/sample/hello/core/HelloGame.h"
 #import "playn/sample/cute/core/CuteGame.h"
 #import "playn/showcase/core/Showcase.h"
-//#import "tuxkids/tuxblocks/core/TuxBlocksGame.h"
+#import "tuxkids/tuxblocks/core/TuxBlocksGame.h"
 
 @implementation AppDelegate
 
@@ -25,8 +25,8 @@
     
 //    PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
 //    PlaynSampleCuteCoreCuteGame* game = [[PlaynSampleCuteCoreCuteGame alloc] init];
-    PlaynShowcaseCoreShowcase* game = [[PlaynShowcaseCoreShowcase alloc] initWithPlaynShowcaseCoreShowcase_DeviceService:nil];
-//    TuxkidsTuxblocksCoreTuxBlocksGame* game = [[TuxkidsTuxblocksCoreTuxBlocksGame alloc] init];
+//    PlaynShowcaseCoreShowcase* game = [[PlaynShowcaseCoreShowcase alloc] initWithPlaynShowcaseCoreShowcase_DeviceService:nil];
+    TuxkidsTuxblocksCoreTuxBlocksGame* game = [[TuxkidsTuxblocksCoreTuxBlocksGame alloc] init];
     
     [PlaynCorePlayN runWithPlaynCoreGame:game];
     return YES;

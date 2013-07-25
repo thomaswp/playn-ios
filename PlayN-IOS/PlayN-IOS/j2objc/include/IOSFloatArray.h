@@ -19,6 +19,9 @@
 //  Created by Tom Ball on 6/16/11.
 //
 
+#ifndef _IOSFloatArray_H_
+#define _IOSFloatArray_H_
+
 #import "IOSArray.h"
 
 // An emulation class that represents a Java float array.  Like a Java array,
@@ -35,6 +38,7 @@
 // Return float at a specified index, throws IndexOutOfBoundsException
 // if out out range.
 - (float)floatAtIndex:(NSUInteger)index;
+- (float *)floatRefAtIndex:(NSUInteger)index;
 
 // Sets float at a specified index, throws IndexOutOfBoundsException
 // if out out range.  Returns replacement value.
@@ -61,3 +65,4 @@
 
 @end
 
+#endif // _IOSFloatArray_H_

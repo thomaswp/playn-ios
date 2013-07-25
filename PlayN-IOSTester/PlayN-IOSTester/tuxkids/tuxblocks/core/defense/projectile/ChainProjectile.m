@@ -24,17 +24,17 @@
 @synthesize hasChained = hasChained_;
 
 - (float)range {
-  return [((TuxkidsTuxblocksCoreDefenseTowerTower *) NIL_CHK(source__)) range] * rangeFactor_;
+  return [((TuxkidsTuxblocksCoreDefenseTowerTower *) nil_chk(source__)) range] * rangeFactor_;
 }
 
 - (BOOL)partOfChainWithTuxkidsTuxblocksCoreDefenseWalkerWalker:(TuxkidsTuxblocksCoreDefenseWalkerWalker *)walker {
   if (target__ == walker) return YES;
   if (parent_ == nil) return NO;
-  return [((TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *) NIL_CHK(parent_)) partOfChainWithTuxkidsTuxblocksCoreDefenseWalkerWalker:walker];
+  return [((TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *) nil_chk(parent_)) partOfChainWithTuxkidsTuxblocksCoreDefenseWalkerWalker:walker];
 }
 
 - (PythagorasFVector *)sourcePosition {
-  return parent_ == nil ? [((TuxkidsTuxblocksCoreDefenseTowerTower *) NIL_CHK(source__)) projectileStart] : [((TuxkidsTuxblocksCoreDefenseWalkerWalker *) NIL_CHK(parent_.target_)) position];
+  return parent_ == nil ? [((TuxkidsTuxblocksCoreDefenseTowerTower *) nil_chk(source__)) projectileStart] : [((TuxkidsTuxblocksCoreDefenseWalkerWalker *) nil_chk(parent_.target_)) position];
 }
 
 - (TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *)createProjectile {
@@ -65,18 +65,18 @@
 - (void)placeWithTuxkidsTuxblocksCoreDefenseGrid:(TuxkidsTuxblocksCoreDefenseGrid *)grid
      withTuxkidsTuxblocksCoreDefenseWalkerWalker:(TuxkidsTuxblocksCoreDefenseWalkerWalker *)target
 withTuxkidsTuxblocksCoreDefenseProjectileChainProjectile:(TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *)parent {
-  [super placeWithTuxkidsTuxblocksCoreDefenseGrid:grid withTuxkidsTuxblocksCoreDefenseWalkerWalker:target withTuxkidsTuxblocksCoreDefenseTowerTower:((TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *) NIL_CHK(parent)).source_];
+  [super placeWithTuxkidsTuxblocksCoreDefenseGrid:grid withTuxkidsTuxblocksCoreDefenseWalkerWalker:target withTuxkidsTuxblocksCoreDefenseTowerTower:((TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *) nil_chk(parent)).source_];
   self.parent = parent;
-  self.damageFactor = ((TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *) NIL_CHK(parent)).damageFactor * damageReduceFactor_;
-  self.rangeFactor = ((TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *) NIL_CHK(parent)).rangeFactor * rangeReduceFactor_;
-  self.damage = [((TuxkidsTuxblocksCoreDefenseTowerTower *) NIL_CHK(source__)) damage] * damageFactor_;
+  self.damageFactor = ((TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *) nil_chk(parent)).damageFactor * damageReduceFactor_;
+  self.rangeFactor = ((TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *) nil_chk(parent)).rangeFactor * rangeReduceFactor_;
+  self.damage = [((TuxkidsTuxblocksCoreDefenseTowerTower *) nil_chk(source__)) damage] * damageFactor_;
   if ([JavaLangMath roundWithFloat:damage_ * damageFactor_] == 0) hits_ = 0;
   if (hits_ == 0) hasChained_ = YES;
 }
 
 - (BOOL)doUpdateWithInt:(int)delta {
   if (!hasChained_ && [self progress] > 0.4f) {
-    BOOL fired = [((TuxkidsTuxblocksCoreDefenseGrid *) NIL_CHK(grid_)) fireProjectileWithTuxkidsTuxblocksCoreDefenseProjectileChainProjectile:self];
+    BOOL fired = [((TuxkidsTuxblocksCoreDefenseGrid *) nil_chk(grid_)) fireProjectileWithTuxkidsTuxblocksCoreDefenseProjectileChainProjectile:self];
     hasChained_ = fired;
   }
   return (BOOL) [super doUpdateWithInt:delta];

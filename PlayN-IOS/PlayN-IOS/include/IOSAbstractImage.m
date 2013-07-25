@@ -44,7 +44,7 @@
 
 }
 
-- (void) getRgbWithInt:(int)startX withInt:(int)startY withInt:(int)width withInt:(int)height withJavaLangIntegerArray:(IOSIntArray *)rgbArray withInt:(int)offset withInt:(int)scanSize {
+- (void) getRgbWithInt:(int)startX withInt:(int)startY withInt:(int)width withInt:(int)height withIntArray:(IOSIntArray *)rgbArray withInt:(int)offset withInt:(int)scanSize {
     
     int bytesPerRow = 4 * width;
     int regionBytesLength = bytesPerRow * height;

@@ -46,7 +46,7 @@
     return self;
 }
 
-- (id<PlaynCoreGlGLBuffer_Float>) addWithJavaLangFloatArray:(IOSFloatArray *)data_ withInt:(int)offset withInt:(int)length_ {
+- (id<PlaynCoreGlGLBuffer_Float>) addWithFloatArray:(IOSFloatArray *)data_ withInt:(int)offset withInt:(int)length_ {
     for (int i = 0; i < length_; i++) {
         data[position++] = [data_ floatAtIndex:i + offset];
     }

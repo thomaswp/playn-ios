@@ -21,7 +21,7 @@
 #import "playn/core/ImageLayer.h"
 #import "playn/core/CanvasImage.h"
 #import "playn/core/Gradient.h"
-#import "playn/core/Font.h"
+#include "playn/core/Font.h"
 #import "playn/core/TextLayout.h"
 #import "playn/core/InternalTransform.h"
 #import "playn/core/gl/GLContext.h"

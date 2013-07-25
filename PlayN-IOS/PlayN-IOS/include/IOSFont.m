@@ -8,6 +8,7 @@
 
 #import "IOSFont.h"
 #import "IOSGraphics.h"
+#include "playn/core/Font.h"
 
 @interface StyleEnum : NSObject {
 }

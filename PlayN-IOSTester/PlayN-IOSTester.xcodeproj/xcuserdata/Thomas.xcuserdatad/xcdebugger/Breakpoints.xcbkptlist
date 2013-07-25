@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PlayN-IOSTester/tuxkids/tuxblocks/core/TuxBlocksGame.m"
-         timestampString = "395205703.91504"
+         timestampString = "396462151.305789"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
+         startingLineNumber = "64"
+         endingLineNumber = "64"
          landmarkName = "@implementation TuxkidsTuxblocksCoreTuxBlocksGame"
          landmarkType = "3">
       </FileBreakpoint>
@@ -69,19 +69,6 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "PlayN-IOSTester/tuxkids/tuxblocks/core/utils/Sobol.m"
-         timestampString = "395206006.003978"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "75"
-         endingLineNumber = "75"
-         landmarkName = "-initWithInt:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
@@ -108,7 +95,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "PlayN-IOSTester/tuxkids/tuxblocks/core/defense/Grid.m"
@@ -160,20 +147,7 @@
          landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSCanvas.m"
-         timestampString = "395689958.146436"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "120"
-         endingLineNumber = "120"
-         landmarkName = "-drawTextWithNSString:withFloat:withFloat:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "../PlayN-IOS/PlayN-IOS/include/IOSCanvas.m"
@@ -261,6 +235,58 @@
          startingLineNumber = "297"
          endingLineNumber = "297"
          landmarkName = "-onOrientationChangeWithOrient:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSCanvasImage.m"
+         timestampString = "396462972.371662"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "54"
+         endingLineNumber = "54"
+         landmarkName = "-setRgbWithInt:withInt:withInt:withInt:withIntArray:withInt:withInt:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSCanvasImage.m"
+         timestampString = "396462960.351046"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
+         landmarkName = "-updateTextureWithInt:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSAbstractImage.m"
+         timestampString = "396462963.540669"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "49"
+         endingLineNumber = "49"
+         landmarkName = "-getRgbWithInt:withInt:withInt:withInt:withIntArray:withInt:withInt:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../PlayN-IOS/PlayN-IOS/include/IOSAbstractImage.m"
+         timestampString = "396462989.065215"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "82"
+         endingLineNumber = "82"
+         landmarkName = "-getRgbWithInt:withInt:withInt:withInt:withIntArray:withInt:withInt:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

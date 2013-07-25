@@ -17,8 +17,9 @@
 #import "IOSGraphics.h"
 #import "IOSFont.h"
 #import "IOSTextLayout.h"
-#import "playn/core/gl/Scale.h"
-#import "playn/core/Path.h"
+#include "playn/core/gl/Scale.h"
+#include "playn/core/Path.h"
+#include "playn/core/Canvas.h"
 
 CGColorSpaceRef colorSpace;
 
@@ -344,6 +345,7 @@ CGColorSpaceRef colorSpace;
 }
 
 + (CGBlendMode) compToBlendWithComposite:(PlaynCoreCanvas_CompositeEnum*)composite {
+    
     if (composite == [PlaynCoreCanvas_CompositeEnum SRC]) {
         return kCGBlendModeCopy;
     } else if (composite == [PlaynCoreCanvas_CompositeEnum DST_ATOP]) {

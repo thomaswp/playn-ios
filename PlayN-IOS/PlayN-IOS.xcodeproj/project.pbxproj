@@ -355,8 +355,6 @@
 		E9C4C2AE178E06F300A6EBE5 /* Value.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C294178E06F300A6EBE5 /* Value.m */; };
 		E9C4C2AF178E06F300A6EBE5 /* Values.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C296178E06F300A6EBE5 /* Values.m */; };
 		E9C4C2B0178E06F300A6EBE5 /* ValueView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C298178E06F300A6EBE5 /* ValueView.m */; };
-		E9C4C2B3178E0A8800A6EBE5 /* AbstractSignal_Sub.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C2B2178E0A8800A6EBE5 /* AbstractSignal_Sub.m */; };
-		E9C4C2B6178E0B8600A6EBE5 /* AbstractValue_Sub.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C2B5178E0B8600A6EBE5 /* AbstractValue_Sub.m */; };
 		E9C4C3FB178E0CE900A6EBE5 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C2BA178E0CE900A6EBE5 /* Animation.m */; };
 		E9C4C3FC178E0CE900A6EBE5 /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C2BC178E0CE900A6EBE5 /* Animator.m */; };
 		E9C4C3FD178E0CE900A6EBE5 /* AnimBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C2BE178E0CE900A6EBE5 /* AnimBuilder.m */; };
@@ -509,8 +507,6 @@
 		E9C4C491178E0CE900A6EBE5 /* TextConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C3F6178E0CE900A6EBE5 /* TextConfig.m */; };
 		E9C4C492178E0CE900A6EBE5 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C3F8178E0CE900A6EBE5 /* Timer.m */; };
 		E9C4C493178E0CE900A6EBE5 /* TypedStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C3FA178E0CE900A6EBE5 /* TypedStorage.m */; };
-		E9C4C496178E129E00A6EBE5 /* Animation_ChainBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C495178E129E00A6EBE5 /* Animation_ChainBuilder.m */; };
-		E9C4C499178E154E00A6EBE5 /* SoundBoard_Sub.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C4C498178E154E00A6EBE5 /* SoundBoard_Sub.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1217,10 +1213,6 @@
 		E9C4C296178E06F300A6EBE5 /* Values.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Values.m; sourceTree = "<group>"; };
 		E9C4C297178E06F300A6EBE5 /* ValueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueView.h; sourceTree = "<group>"; };
 		E9C4C298178E06F300A6EBE5 /* ValueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueView.m; sourceTree = "<group>"; };
-		E9C4C2B1178E0A8800A6EBE5 /* AbstractSignal_Sub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractSignal_Sub.h; sourceTree = "<group>"; };
-		E9C4C2B2178E0A8800A6EBE5 /* AbstractSignal_Sub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractSignal_Sub.m; sourceTree = "<group>"; };
-		E9C4C2B4178E0B8600A6EBE5 /* AbstractValue_Sub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractValue_Sub.h; sourceTree = "<group>"; };
-		E9C4C2B5178E0B8600A6EBE5 /* AbstractValue_Sub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractValue_Sub.m; sourceTree = "<group>"; };
 		E9C4C2B9178E0CE900A6EBE5 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		E9C4C2BA178E0CE900A6EBE5 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
 		E9C4C2BB178E0CE900A6EBE5 /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
@@ -1525,10 +1517,6 @@
 		E9C4C3F8178E0CE900A6EBE5 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timer.m; sourceTree = "<group>"; };
 		E9C4C3F9178E0CE900A6EBE5 /* TypedStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypedStorage.h; sourceTree = "<group>"; };
 		E9C4C3FA178E0CE900A6EBE5 /* TypedStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypedStorage.m; sourceTree = "<group>"; };
-		E9C4C494178E129E00A6EBE5 /* Animation_ChainBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation_ChainBuilder.h; sourceTree = "<group>"; };
-		E9C4C495178E129E00A6EBE5 /* Animation_ChainBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation_ChainBuilder.m; sourceTree = "<group>"; };
-		E9C4C497178E154E00A6EBE5 /* SoundBoard_Sub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundBoard_Sub.h; sourceTree = "<group>"; };
-		E9C4C498178E154E00A6EBE5 /* SoundBoard_Sub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundBoard_Sub.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2336,12 +2324,8 @@
 			children = (
 				E9C4C269178E06F300A6EBE5 /* AbstractSignal.h */,
 				E9C4C26A178E06F300A6EBE5 /* AbstractSignal.m */,
-				E9C4C2B1178E0A8800A6EBE5 /* AbstractSignal_Sub.h */,
-				E9C4C2B2178E0A8800A6EBE5 /* AbstractSignal_Sub.m */,
 				E9C4C26B178E06F300A6EBE5 /* AbstractValue.h */,
 				E9C4C26C178E06F300A6EBE5 /* AbstractValue.m */,
-				E9C4C2B4178E0B8600A6EBE5 /* AbstractValue_Sub.h */,
-				E9C4C2B5178E0B8600A6EBE5 /* AbstractValue_Sub.m */,
 				E9C4C26D178E06F300A6EBE5 /* Connection.h */,
 				E9C4C26E178E06F300A6EBE5 /* Connection.m */,
 				E9C4C26F178E06F300A6EBE5 /* ConnectionGroup.h */,
@@ -2415,8 +2399,6 @@
 			children = (
 				E9C4C2B9178E0CE900A6EBE5 /* Animation.h */,
 				E9C4C2BA178E0CE900A6EBE5 /* Animation.m */,
-				E9C4C494178E129E00A6EBE5 /* Animation_ChainBuilder.h */,
-				E9C4C495178E129E00A6EBE5 /* Animation_ChainBuilder.m */,
 				E9C4C2BB178E0CE900A6EBE5 /* Animator.h */,
 				E9C4C2BC178E0CE900A6EBE5 /* Animator.m */,
 				E9C4C2BD178E0CE900A6EBE5 /* AnimBuilder.h */,
@@ -2612,8 +2594,6 @@
 				E9C4C33C178E0CE900A6EBE5 /* Playable.m */,
 				E9C4C33D178E0CE900A6EBE5 /* SoundBoard.h */,
 				E9C4C33E178E0CE900A6EBE5 /* SoundBoard.m */,
-				E9C4C497178E154E00A6EBE5 /* SoundBoard_Sub.h */,
-				E9C4C498178E154E00A6EBE5 /* SoundBoard_Sub.m */,
 			);
 			path = sound;
 			sourceTree = "<group>";
@@ -3230,8 +3210,6 @@
 				E9C4C2AE178E06F300A6EBE5 /* Value.m in Sources */,
 				E9C4C2AF178E06F300A6EBE5 /* Values.m in Sources */,
 				E9C4C2B0178E06F300A6EBE5 /* ValueView.m in Sources */,
-				E9C4C2B3178E0A8800A6EBE5 /* AbstractSignal_Sub.m in Sources */,
-				E9C4C2B6178E0B8600A6EBE5 /* AbstractValue_Sub.m in Sources */,
 				E9C4C3FB178E0CE900A6EBE5 /* Animation.m in Sources */,
 				E9C4C3FC178E0CE900A6EBE5 /* Animator.m in Sources */,
 				E9C4C3FD178E0CE900A6EBE5 /* AnimBuilder.m in Sources */,
@@ -3384,8 +3362,6 @@
 				E9C4C491178E0CE900A6EBE5 /* TextConfig.m in Sources */,
 				E9C4C492178E0CE900A6EBE5 /* Timer.m in Sources */,
 				E9C4C493178E0CE900A6EBE5 /* TypedStorage.m in Sources */,
-				E9C4C496178E129E00A6EBE5 /* Animation_ChainBuilder.m in Sources */,
-				E9C4C499178E154E00A6EBE5 /* SoundBoard_Sub.m in Sources */,
 				E96B4EE61790AD9200D899B3 /* IOSKeyboard.m in Sources */,
 				E907870A1794830700FFDA0C /* IOSTouch.m in Sources */,
 				E907871017948FAE00FFDA0C /* IOSSound.m in Sources */,

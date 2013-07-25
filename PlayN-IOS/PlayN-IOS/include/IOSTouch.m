@@ -10,6 +10,9 @@
 #import "IOSGraphics.h"
 #import "pythagoras/f/IPoint.h"
 #import "IOSObjectArray.h"
+#include "playn/core/Touch.h"
+#include "playn/core/Events.h"
+#include "IOSClass.h"
 
 @implementation IOSTouch
 

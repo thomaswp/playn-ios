@@ -19,6 +19,9 @@
 //  Created by Tom Ball on 8/15/11.
 //
 
+#ifndef _NSObject_JavaObject_H_
+#define _NSObject_JavaObject_H_
+
 #import <Foundation/Foundation.h>
 #import "JavaObject.h"
 
@@ -51,7 +54,8 @@
 
 // Marked as unused to avoid a clang warning when this file is included
 // but NIL_CHK isn't used.
-__attribute__ ((unused)) static inline id nil_chk(id p) {
+__attribute__ ((unused)) static inline id __unsafe_unretained
+    nil_chk(id __unsafe_unretained p) {
 #if !defined(J2OBJC_DISABLE_NIL_CHECKS)
   return p ? p : [NSObject throwNullPointerException];
 #else
@@ -59,5 +63,4 @@ __attribute__ ((unused)) static inline id nil_chk(id p) {
 #endif
 }
 
-#define NIL_CHK(p) nil_chk(p)
-
+#endif // _NSObject_JavaObject_H_

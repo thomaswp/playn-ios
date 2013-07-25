@@ -10,6 +10,7 @@
 #import "IOSGraphics.h"
 #import "playn/core/Events.h"
 #import "pythagoras/f/IPoint.h"
+#include "playn/core/Pointer.h"
 
 @implementation IOSPointer
 

@@ -50,7 +50,7 @@
     return [super ensureTexture];
 }
 
-- (void) setRgbWithInt:(int)startX withInt:(int)startY withInt:(int)width withInt:(int)height withJavaLangIntegerArray:(IOSIntArray *)rgbArray withInt:(int)offset withInt:(int)scanSize {
+- (void) setRgbWithInt:(int)startX withInt:(int)startY withInt:(int)width withInt:(int)height withIntArray:(IOSIntArray *)rgbArray withInt:(int)offset withInt:(int)scanSize {
     NSLog(@"CanvasImage.setRgb()");
 }
 

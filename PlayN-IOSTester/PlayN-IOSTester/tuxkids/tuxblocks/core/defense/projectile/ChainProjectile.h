@@ -5,6 +5,9 @@
 //  Created by Thomas on 7/10/13.
 //
 
+#ifndef _TuxkidsTuxblocksCoreDefenseProjectileChainProjectile_H_
+#define _TuxkidsTuxblocksCoreDefenseProjectileChainProjectile_H_
+
 @class PythagorasFVector;
 @class TuxkidsTuxblocksCoreDefenseGrid;
 @class TuxkidsTuxblocksCoreDefenseWalkerWalker;
@@ -46,3 +49,5 @@
 withTuxkidsTuxblocksCoreDefenseProjectileChainProjectile:(TuxkidsTuxblocksCoreDefenseProjectileChainProjectile *)parent;
 - (BOOL)doUpdateWithInt:(int)delta;
 @end
+
+#endif

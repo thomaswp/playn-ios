@@ -30,6 +30,7 @@
 #import "playn/core/RegularExpression.h"
 #import "playn/core/Assets.h"
 #import "playn/core/Net.h"
+#include "playn/core/Platform.h"
 #import "playn/core/util/RunQueue.h"
 #import "playn/core/gl/GLContext.h"
 #import "playn/core/json/JsonImpl.h"
