@@ -15,6 +15,7 @@
 #import "IOSKeyboard.h"
 #import "IOSTouch.h"
 #import "IOSViewController.h"
+#import "IOSRegularExpression.h"
 #import "java/lang/Runnable.h"
 #import "java/lang/Math.h"
 #import "java/lang/System.h"
@@ -30,10 +31,10 @@
 #import "playn/core/RegularExpression.h"
 #import "playn/core/Assets.h"
 #import "playn/core/Net.h"
-#include "playn/core/Platform.h"
 #import "playn/core/util/RunQueue.h"
 #import "playn/core/gl/GLContext.h"
 #import "playn/core/json/JsonImpl.h"
+#include "playn/core/Platform.h"
 
 @implementation SupportedOrients {
     @public UIDeviceOrientation defaultOrient;
@@ -252,8 +253,7 @@ const bool DISPLAY_FPS = YES;
 }
 
 - (id<PlaynCoreRegularExpression>) regularExpression {
-    NSLog(@"Regular Expression");
-    return  nil;
+    return [[IOSRegularExpression alloc] init];
 }
 
 - (id<PlaynCoreStorage>) storage {

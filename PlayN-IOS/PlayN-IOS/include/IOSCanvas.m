@@ -59,6 +59,10 @@ CGColorSpaceRef colorSpace;
     return self;
 }
 
+- (CGContextRef) bctx{
+    return bctx;
+}
+
 - (char*) data {
     return data;
 }
@@ -107,6 +111,15 @@ CGColorSpaceRef colorSpace;
 
 - (id<PlaynCorePath>) createPath {
     return [[IOSPath alloc] init];
+}
+
+- (id<PlaynCoreCanvas>) drawLineWithFloat:(float)x0 withFloat:(float)y0 withFloat:(float)x1 withFloat:(float)y1 {
+    CGContextBeginPath(bctx);
+    CGContextMoveToPoint(bctx, x0, y0);
+    CGContextAddLineToPoint(bctx, x1, y1);
+    CGContextStrokePath(bctx);
+    isDirty_ = YES;
+    return self;
 }
 
 - (id<PlaynCoreCanvas>) drawPointWithFloat:(float)x withFloat:(float)y {

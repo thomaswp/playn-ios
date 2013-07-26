@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     IOSPlatform_Config* config = [[IOSPlatform_Config alloc] init];
     config->frameInterval = 2;
-    config->orients = [SupportedOrients ALL];
+    config->orients = [SupportedOrients LANDSCAPES];
     [IOSPlatform registerPlatformWithApp:application withConfig:config];
     
 //    PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];

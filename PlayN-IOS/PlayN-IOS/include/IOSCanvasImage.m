@@ -51,7 +51,32 @@
 }
 
 - (void) setRgbWithInt:(int)startX withInt:(int)startY withInt:(int)width withInt:(int)height withIntArray:(IOSIntArray *)rgbArray withInt:(int)offset withInt:(int)scanSize {
-    NSLog(@"CanvasImage.setRgb()");
+//    NSLog(@"CanvasImage.setRgb()");
+//    CGContextRef bctx = [canvas bctx];
+    //TODO: fix... everything
+    char* data = [canvas data];
+    int regionBytesLength = width * height * 4;
+    int x = 0;
+    int y = 0; //height - 1; //inverted y
+    for (int px = 0; px < regionBytesLength; px += 4) {
+        int index = offset + y * scanSize + x;
+        int color = [rgbArray intAtIndex:index];
+        int a = color >> 24;
+        int r = (color >> 16) & 0xFF;
+        int g = (color >> 8) & 0xFF;
+        int b = color & 0xFF;
+        
+        data[px    ] = r;
+        data[px + 1] = g;
+        data[px + 2] = b;
+        data[px + 3] = a;
+    
+        x++;
+        if (x == width) {
+            x = 0;
+            y++; //y--;
+        }
+    }
 }
 
 - (void) updateTextureWithInt:(int)tex {

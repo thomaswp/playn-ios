@@ -38,5 +38,6 @@
 - (int) texHeight;
 - (CGImageRef) cgImage;
 - (void) dispose;
+- (CGContextRef) bctx;
 
 @end
