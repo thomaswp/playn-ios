@@ -18,6 +18,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     IOSPlatform_Config* config = [[IOSPlatform_Config alloc] init];
     config->frameInterval = 2;
     config->orients = [SupportedOrients LANDSCAPES];

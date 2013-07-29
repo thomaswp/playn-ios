@@ -51,8 +51,7 @@
 }
 
 - (void) setRgbWithInt:(int)startX withInt:(int)startY withInt:(int)width withInt:(int)height withIntArray:(IOSIntArray *)rgbArray withInt:(int)offset withInt:(int)scanSize {
-//    NSLog(@"CanvasImage.setRgb()");
-//    CGContextRef bctx = [canvas bctx];
+    NSLog(@"CanvasImage.setRgb()");
     //TODO: fix... everything
     char* data = [canvas data];
     int regionBytesLength = width * height * 4;

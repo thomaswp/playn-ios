@@ -386,11 +386,11 @@ IOSObjectArray *TripleplayGameScreenStack_Transition_DirEnum_values;
                withTripleplayGameScreen:(TripleplayGameScreen *)oscreen
                withTripleplayGameScreen:(TripleplayGameScreen *)nscreen
 withTripleplayGameScreenStack_Transition:(id<TripleplayGameScreenStack_Transition>)trans {
+  this$0_ = outer$;
+  _oscreen_ = oscreen;
+  _nscreen_ = nscreen;
+  _trans_ = trans;
   if ((self = [super init])) {
-    this$0_ = outer$;
-    _oscreen_ = oscreen;
-    _nscreen_ = nscreen;
-    _trans_ = trans;
   }
   return self;
 }
@@ -412,15 +412,18 @@ withTripleplayGameScreenStack_Transition:(id<TripleplayGameScreenStack_Transitio
   [((TripleplayGameScreen *) nil_chk(_oscreen_)) paintWithPlaynCoreUtilClock:clock];
   [((TripleplayGameScreen *) nil_chk(_nscreen_)) paintWithPlaynCoreUtilClock:clock];
   _complete_ = [((id<TripleplayGameScreenStack_Transition>) nil_chk(_trans_)) updateWithTripleplayGameScreen:_oscreen_ withTripleplayGameScreen:_nscreen_ withFloat:_elapsed_ += [((id<PlaynCoreUtilClock>) nil_chk(clock)) dt]];
+    if (_complete_) {
+        NSLog(@"C");
+    }
 }
 
 - (void)complete {
-  this$0_._transitor = nil;
   [((id<TripleplayGameScreenStack_Transition>) nil_chk(_trans_)) completeWithTripleplayGameScreen:_oscreen_ withTripleplayGameScreen:_nscreen_];
   (void) [((id<PlaynCoreGroupLayer>) nil_chk(((TripleplayGameScreen *) nil_chk(_nscreen_)).layer)) setTranslationWithFloat:this$0_.originX withFloat:this$0_.originY];
   [((TripleplayGameScreen *) nil_chk(_nscreen_)) showTransitionCompleted];
   [((id<PlaynCorePointer>) nil_chk([PlaynCorePlayN pointer])) setEnabledWithBOOL:YES];
   [self onComplete];
+  this$0_._transitor = nil;
 }
 
 - (void)showNewScreen {
@@ -456,9 +459,10 @@ withTripleplayGameScreenStack_Transition:(id<TripleplayGameScreenStack_Transitio
                withTripleplayGameScreen:(TripleplayGameScreen *)arg$1
 withTripleplayGameScreenStack_Transition:(id<TripleplayGameScreenStack_Transition>)arg$2
                withTripleplayGameScreen:(TripleplayGameScreen *)capture$0 {
+  this$1_ = outer$;
+  val$otop_ = capture$0;
   if ((self = [super initWithTripleplayGameScreenStack:outer$ withTripleplayGameScreen:arg$0 withTripleplayGameScreen:arg$1 withTripleplayGameScreenStack_Transition:arg$2])) {
-    this$1_ = outer$;
-    val$otop_ = capture$0;
+
   }
   return self;
 }
