@@ -1547,12 +1547,6 @@
 		E9A77B7E178DCF27002BB058 = {
 			isa = PBXGroup;
 			children = (
-				E9A59EC417959125001CB603 /* CoreText.framework */,
-				E9A77F63178DD1F5002BB058 /* CoreGraphics.framework */,
-				E9A77F64178DD1F5002BB058 /* OpenGLES.framework */,
-				E9A77F65178DD1F5002BB058 /* QuartzCore.framework */,
-				E9A77F66178DD1F5002BB058 /* UIKit.framework */,
-				E9A77F61178DD1A9002BB058 /* GLKit.framework */,
 				E9A77F18178DCFD0002BB058 /* libjre_emul.a */,
 				E9A77B8C178DCF27002BB058 /* PlayN-IOS */,
 				E9A77B89178DCF27002BB058 /* Frameworks */,
@@ -1571,6 +1565,12 @@
 		E9A77B89178DCF27002BB058 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9A59EC417959125001CB603 /* CoreText.framework */,
+				E9A77F63178DD1F5002BB058 /* CoreGraphics.framework */,
+				E9A77F64178DD1F5002BB058 /* OpenGLES.framework */,
+				E9A77F65178DD1F5002BB058 /* QuartzCore.framework */,
+				E9A77F66178DD1F5002BB058 /* UIKit.framework */,
+				E9A77F61178DD1A9002BB058 /* GLKit.framework */,
 				E9A77B8A178DCF27002BB058 /* Foundation.framework */,
 			);
 			name = Frameworks;

@@ -20,7 +20,3 @@
 * util/Ref.java has crazy generisim, which created a duplicate method. Removed one version of the method (didn't seem to be used)
 * ScreenStack.java: Transistor nils its parent's reference to itself before it's fully finished, meaning ARC destroys it before it's done: moved nil to end of complete logic
 
-**TuxBlocks:**
-* Renders have problem where inner classes don't assign a reference to the outer class until after a super constructor class: just moved outer class assignment to before constructor
-* All Rounds have the same problem as above, and same solution
-* TimesBlock.java/Ninepatch.java: 2d Arrays of protocols (interfaces) break jre_emul. Made TimesBlock just use a regular BlockLayer in the meantime.
