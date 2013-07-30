@@ -6,58 +6,45 @@
 //  Copyright (c) 2013 Thomas. All rights reserved.
 //
 
+// Required imports
 #import "AppDelegate.h"
 #import "IOSPlatform.h"
 #import "playn/core/PlayN.h"
 
+// Import your game using the full package path
+// If you headers do not show up, recheck your "User header search paths"
+// in your target's build options
 #import "playn/sample/hello/core/HelloGame.h"
 #import "playn/sample/cute/core/CuteGame.h"
 #import "playn/showcase/core/Showcase.h"
-#import "tuxkids/tuxblocks/core/TuxBlocksGame.h"
 
+// Check AppDelegate.h - make sure it inherits from IOSAppDelegate
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Call super
+    [super application:application didFinishLaunchingWithOptions:launchOptions];
     
+    // Create a Config and set options
     IOSPlatform_Config* config = [[IOSPlatform_Config alloc] init];
+    // targetFPS = 60 / frameInterval
     config->frameInterval = 2;
-    config->orients = [SupportedOrients LANDSCAPES];
+    // You can target different orientations
+    config->orients = [SupportedOrients ALL];
+    // Register the IOS Platform
     [IOSPlatform registerPlatformWithApp:application withConfig:config];
     
+    // Chose which sample game to test
 //    PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
 //    PlaynSampleCuteCoreCuteGame* game = [[PlaynSampleCuteCoreCuteGame alloc] init];
-//    PlaynShowcaseCoreShowcase* game = [[PlaynShowcaseCoreShowcase alloc] initWithPlaynShowcaseCoreShowcase_DeviceService:nil];
-    TuxkidsTuxblocksCoreTuxBlocksGame* game = [[TuxkidsTuxblocksCoreTuxBlocksGame alloc] init];
+    PlaynShowcaseCoreShowcase* game = [[PlaynShowcaseCoreShowcase alloc] initWithPlaynShowcaseCoreShowcase_DeviceService:nil];
     
+    // Run the game
     [PlaynCorePlayN runWithPlaynCoreGame:game];
+    
     return YES;
 }
 							
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
 
 @end

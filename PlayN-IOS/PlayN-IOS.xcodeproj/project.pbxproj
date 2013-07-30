@@ -12,6 +12,7 @@
 		E907871317948FE400FFDA0C /* IOSTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E907871217948FE400FFDA0C /* IOSTextLayout.m */; };
 		E92B24F017A32CC70062B42A /* IOSRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B24EF17A32CC70062B42A /* IOSRegularExpression.m */; };
 		E96B4EE61790AD9200D899B3 /* IOSKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */; };
+		E999B82417A8117900525F46 /* IOSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E999B82317A8117900525F46 /* IOSAppDelegate.m */; };
 		E9A59EC517959126001CB603 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A59EC417959125001CB603 /* CoreText.framework */; };
 		E9A77B8B178DCF27002BB058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A77B8A178DCF27002BB058 /* Foundation.framework */; };
 		E9A77DF1178DCF6F002BB058 /* AbstractAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77B9B178DCF6E002BB058 /* AbstractAssets.m */; };
@@ -533,6 +534,8 @@
 		E92B24EF17A32CC70062B42A /* IOSRegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSRegularExpression.m; path = include/IOSRegularExpression.m; sourceTree = "<group>"; };
 		E96B4EE41790AD9200D899B3 /* IOSKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSKeyboard.h; path = include/IOSKeyboard.h; sourceTree = "<group>"; };
 		E96B4EE51790AD9200D899B3 /* IOSKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSKeyboard.m; path = include/IOSKeyboard.m; sourceTree = "<group>"; };
+		E999B82217A8117900525F46 /* IOSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOSAppDelegate.h; path = include/IOSAppDelegate.h; sourceTree = "<group>"; };
+		E999B82317A8117900525F46 /* IOSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IOSAppDelegate.m; path = include/IOSAppDelegate.m; sourceTree = "<group>"; };
 		E9A59EC417959125001CB603 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E9A77B87178DCF27002BB058 /* libPlayN-IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPlayN-IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A77B8A178DCF27002BB058 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -2273,6 +2276,8 @@
 			children = (
 				E9A77FFA178DDAED002BB058 /* IOSAbstractImage.h */,
 				E9A77FFB178DDAED002BB058 /* IOSAbstractImage.m */,
+				E999B82217A8117900525F46 /* IOSAppDelegate.h */,
+				E999B82317A8117900525F46 /* IOSAppDelegate.m */,
 				E9A77FFC178DDAED002BB058 /* IOSAssets.h */,
 				E9A77FFD178DDAED002BB058 /* IOSAssets.m */,
 				E9A77FFE178DDAED002BB058 /* IOSAsyncImage.h */,
@@ -3390,6 +3395,7 @@
 				E907871017948FAE00FFDA0C /* IOSSound.m in Sources */,
 				E907871317948FE400FFDA0C /* IOSTextLayout.m in Sources */,
 				E92B24F017A32CC70062B42A /* IOSRegularExpression.m in Sources */,
+				E999B82417A8117900525F46 /* IOSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
