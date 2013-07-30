@@ -7,12 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "playn/sample/hello/core/HelloGame.h"
+#import "playn/core/PlayN.h"
+#import "IOSPlatform.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [IOSPlatform registerPlatformWithApp:application];
+    
+    PlaynSampleHelloCoreHelloGame* game = [[PlaynSampleHelloCoreHelloGame alloc] init];
+    
+    [PlaynCorePlayN runWithPlaynCoreGame:game];
     return YES;
 }
 							

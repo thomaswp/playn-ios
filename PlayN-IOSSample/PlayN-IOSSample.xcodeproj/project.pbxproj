@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9A4413217A6FDF9003AC330 /* libPlayN-IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A4413117A6FDF9003AC330 /* libPlayN-IOS.a */; };
+		E9A4413417A6FE0F003AC330 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = E9A4413317A6FE0F003AC330 /* assets */; };
+		E9A4413617A6FEB4003AC330 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A4413517A6FEB4003AC330 /* CoreText.framework */; };
 		E9A77FC8178DD946002BB058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A77FC7178DD946002BB058 /* UIKit.framework */; };
 		E9A77FCA178DD946002BB058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A77FC9178DD946002BB058 /* Foundation.framework */; };
 		E9A77FCC178DD946002BB058 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A77FCB178DD946002BB058 /* CoreGraphics.framework */; };
@@ -18,18 +21,14 @@
 		E9A77FDE178DD946002BB058 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A77FDD178DD946002BB058 /* Default.png */; };
 		E9A77FE0178DD946002BB058 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A77FDF178DD946002BB058 /* Default@2x.png */; };
 		E9A77FE2178DD946002BB058 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A77FE1178DD946002BB058 /* Default-568h@2x.png */; };
-		E9A77FE5178DD946002BB058 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A77FE3178DD946002BB058 /* MainStoryboard_iPhone.storyboard */; };
-		E9A77FE8178DD946002BB058 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A77FE6178DD946002BB058 /* MainStoryboard_iPad.storyboard */; };
-		E9A77FEA178DD946002BB058 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = E9A77FE9178DD946002BB058 /* Shader.fsh */; };
-		E9A77FEC178DD946002BB058 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = E9A77FEB178DD946002BB058 /* Shader.vsh */; };
-		E9A77FEF178DD946002BB058 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A77FEE178DD946002BB058 /* ViewController.m */; };
-		E9A77FF6178DD961002BB058 /* libPlayN-IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A77FF5178DD961002BB058 /* libPlayN-IOS.a */; };
 		E9A78042178DDF72002BB058 /* HelloGame.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A7803F178DDF72002BB058 /* HelloGame.m */; };
 		E9A78043178DDF72002BB058 /* Pea.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A78041178DDF72002BB058 /* Pea.m */; };
-		E9A78048178DE68B002BB058 /* images in Resources */ = {isa = PBXBuildFile; fileRef = E9A78047178DE68B002BB058 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9A4413117A6FDF9003AC330 /* libPlayN-IOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPlayN-IOS.a"; path = "../lib/libPlayN-IOS.a"; sourceTree = "<group>"; };
+		E9A4413317A6FE0F003AC330 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		E9A4413517A6FEB4003AC330 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E9A77FC4178DD946002BB058 /* PlayN-IOSSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlayN-IOSSample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A77FC7178DD946002BB058 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E9A77FC9178DD946002BB058 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,18 +44,10 @@
 		E9A77FDD178DD946002BB058 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E9A77FDF178DD946002BB058 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E9A77FE1178DD946002BB058 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E9A77FE4178DD946002BB058 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		E9A77FE7178DD946002BB058 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E9A77FE9178DD946002BB058 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		E9A77FEB178DD946002BB058 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
-		E9A77FED178DD946002BB058 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E9A77FEE178DD946002BB058 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E9A77FF5178DD961002BB058 /* libPlayN-IOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPlayN-IOS.a"; path = "../PlayN-IOS/PlayN-IOS/lib/libPlayN-IOS.a"; sourceTree = "<group>"; };
 		E9A7803E178DDF72002BB058 /* HelloGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloGame.h; sourceTree = "<group>"; };
 		E9A7803F178DDF72002BB058 /* HelloGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloGame.m; sourceTree = "<group>"; };
 		E9A78040178DDF72002BB058 /* Pea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pea.h; sourceTree = "<group>"; };
 		E9A78041178DDF72002BB058 /* Pea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pea.m; sourceTree = "<group>"; };
-		E9A78047178DE68B002BB058 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A77FF6178DD961002BB058 /* libPlayN-IOS.a in Frameworks */,
+				E9A4413617A6FEB4003AC330 /* CoreText.framework in Frameworks */,
+				E9A4413217A6FDF9003AC330 /* libPlayN-IOS.a in Frameworks */,
 				E9A77FC8178DD946002BB058 /* UIKit.framework in Frameworks */,
 				E9A77FCA178DD946002BB058 /* Foundation.framework in Frameworks */,
 				E9A77FCC178DD946002BB058 /* CoreGraphics.framework in Frameworks */,
@@ -79,7 +71,7 @@
 		E9A77FBB178DD946002BB058 = {
 			isa = PBXGroup;
 			children = (
-				E9A77FF5178DD961002BB058 /* libPlayN-IOS.a */,
+				E9A4413117A6FDF9003AC330 /* libPlayN-IOS.a */,
 				E9A77FD1178DD946002BB058 /* PlayN-IOSSample */,
 				E9A77FC6178DD946002BB058 /* Frameworks */,
 				E9A77FC5178DD946002BB058 /* Products */,
@@ -97,6 +89,7 @@
 		E9A77FC6178DD946002BB058 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9A4413517A6FEB4003AC330 /* CoreText.framework */,
 				E9A77FC7178DD946002BB058 /* UIKit.framework */,
 				E9A77FC9178DD946002BB058 /* Foundation.framework */,
 				E9A77FCB178DD946002BB058 /* CoreGraphics.framework */,
@@ -109,16 +102,10 @@
 		E9A77FD1178DD946002BB058 /* PlayN-IOSSample */ = {
 			isa = PBXGroup;
 			children = (
-				E9A78047178DE68B002BB058 /* images */,
+				E9A4413317A6FE0F003AC330 /* assets */,
 				E9A7803A178DDF72002BB058 /* playn */,
 				E9A77FDA178DD946002BB058 /* AppDelegate.h */,
 				E9A77FDB178DD946002BB058 /* AppDelegate.m */,
-				E9A77FE3178DD946002BB058 /* MainStoryboard_iPhone.storyboard */,
-				E9A77FE6178DD946002BB058 /* MainStoryboard_iPad.storyboard */,
-				E9A77FE9178DD946002BB058 /* Shader.fsh */,
-				E9A77FEB178DD946002BB058 /* Shader.vsh */,
-				E9A77FED178DD946002BB058 /* ViewController.h */,
-				E9A77FEE178DD946002BB058 /* ViewController.m */,
 				E9A77FD2178DD946002BB058 /* Supporting Files */,
 			);
 			path = "PlayN-IOSSample";
@@ -228,11 +215,7 @@
 				E9A77FDE178DD946002BB058 /* Default.png in Resources */,
 				E9A77FE0178DD946002BB058 /* Default@2x.png in Resources */,
 				E9A77FE2178DD946002BB058 /* Default-568h@2x.png in Resources */,
-				E9A77FE5178DD946002BB058 /* MainStoryboard_iPhone.storyboard in Resources */,
-				E9A77FE8178DD946002BB058 /* MainStoryboard_iPad.storyboard in Resources */,
-				E9A77FEA178DD946002BB058 /* Shader.fsh in Resources */,
-				E9A77FEC178DD946002BB058 /* Shader.vsh in Resources */,
-				E9A78048178DE68B002BB058 /* images in Resources */,
+				E9A4413417A6FE0F003AC330 /* assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +228,6 @@
 			files = (
 				E9A77FD8178DD946002BB058 /* main.m in Sources */,
 				E9A77FDC178DD946002BB058 /* AppDelegate.m in Sources */,
-				E9A77FEF178DD946002BB058 /* ViewController.m in Sources */,
 				E9A78042178DDF72002BB058 /* HelloGame.m in Sources */,
 				E9A78043178DDF72002BB058 /* Pea.m in Sources */,
 			);
@@ -260,22 +242,6 @@
 				E9A77FD5178DD946002BB058 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E9A77FE3178DD946002BB058 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9A77FE4178DD946002BB058 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		E9A77FE6178DD946002BB058 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9A77FE7178DD946002BB058 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -347,9 +313,9 @@
 				INFOPLIST_FILE = "PlayN-IOSSample/PlayN-IOSSample-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../PlayN-IOS/PlayN-IOS/lib\"",
-					"\"$(SRCROOT)/../PlayN-IOS/PlayN-IOS/j2objc\"",
+					"\"$(SRCROOT)/../lib\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../PlayN-IOS/PlayN-IOS/j2objc/include\" \"$(SRCROOT)/../PlayN-IOS/PlayN-IOS/include\" \"$(SRCROOT)/PlayN-IOSSample";
@@ -365,8 +331,7 @@
 				INFOPLIST_FILE = "PlayN-IOSSample/PlayN-IOSSample-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../PlayN-IOS/PlayN-IOS/lib\"",
-					"\"$(SRCROOT)/../PlayN-IOS/PlayN-IOS/j2objc\"",
+					"\"$(SRCROOT)/../lib\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -394,6 +359,7 @@
 				E9A77FF4178DD946002BB058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
